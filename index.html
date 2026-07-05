@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>D A TRADERS — Straight from the Hills of Kerala</title>
-<meta name="description" content="D A TRADERS is a wholesale spice exporter from Wayanad, Kerala, offering authentic hill-grown pepper, cardamom, ginger, turmeric, cloves and coffee.">
+<meta name="description" content="D A TRADERS is a wholesale and retail trader from Wayanad, Kerala, offering authentic hill-grown rubber, coffee, areca nut (adakka) and black pepper.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -96,13 +96,45 @@
   .products{background:var(--forest);color:#fff;}
   .products .section-head h2, .products .eyebrow-dark{color:#fff;}
   .products .section-head p{color:#c7d4cb;}
-  .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+  .product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;}
   .p-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:28px;transition:.2s;}
   .p-card:hover{background:rgba(255,255,255,.11);}
   .p-swatch{width:56px;height:56px;border-radius:50%;margin-bottom:18px;}
   .p-card h4{color:#fff;font-size:19px;margin-bottom:8px;}
   .p-card p{color:#cfd9d2;font-size:14px;margin-bottom:14px;}
   .p-tag{display:inline-block;font-size:11.5px;letter-spacing:.5px;text-transform:uppercase;color:var(--gold);border:1px solid rgba(212,160,23,.5);padding:4px 10px;border-radius:20px;}
+
+  /* KERALA DIVIDER */
+  .kerala-divider{height:16px;background:
+      repeating-linear-gradient(45deg, var(--gold) 0 3px, transparent 3px 11px),
+      repeating-linear-gradient(-45deg, var(--terracotta) 0 3px, transparent 3px 11px);
+      opacity:.55;}
+
+  /* VISTA / FOG BANNER */
+  .vista{position:relative;height:440px;overflow:hidden;background:linear-gradient(180deg,#bcd4c4 0%,#8fb39c 30%,#5c8a6c 58%,#345c40 100%);}
+  .hill-layer{position:absolute;bottom:0;left:0;width:100%;}
+  .hill-layer.l3{height:82%;background:#5c8a6c;opacity:.65;clip-path:polygon(0 100%,0 78%,22% 58%,48% 76%,74% 54%,100% 70%,100% 100%);}
+  .hill-layer.l2{height:68%;background:#3f6b4c;opacity:.85;clip-path:polygon(0 100%,0 66%,18% 46%,38% 64%,55% 40%,72% 60%,88% 36%,100% 52%,100% 100%);}
+  .hill-layer.l1{height:52%;background:#25462f;opacity:1;clip-path:polygon(0 100%,0 58%,15% 36%,32% 62%,48% 26%,64% 52%,80% 18%,92% 46%,100% 30%,100% 100%);}
+  .fog{position:absolute;top:0;left:-15%;width:130%;height:100%;z-index:4;filter:blur(9px);
+      background:
+        radial-gradient(ellipse 55% 26% at 18% 42%, rgba(255,255,255,.6) 0%, transparent 70%),
+        radial-gradient(ellipse 45% 22% at 68% 62%, rgba(255,255,255,.45) 0%, transparent 70%),
+        radial-gradient(ellipse 38% 18% at 42% 78%, rgba(255,255,255,.4) 0%, transparent 70%);
+      animation: drift 24s ease-in-out infinite alternate;}
+  @keyframes drift{ from{transform:translateX(0);} to{transform:translateX(5%);} }
+  .vista-text{position:absolute;inset:0;z-index:5;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#fff;padding:0 24px;}
+  .vista-text .eyebrow{color:var(--gold);}
+  .vista-text h3{color:#fff;font-size:30px;max-width:640px;margin-bottom:14px;}
+  .vista-text p{color:#e6efe2;max-width:560px;font-size:15.5px;}
+
+  /* HARVEST TIMELINE */
+  .harvest-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative;}
+  .harvest-grid::before{content:"";position:absolute;top:34px;left:10%;right:10%;height:2px;background:var(--mist);z-index:0;}
+  .h-step{position:relative;text-align:center;padding:0 10px;z-index:1;}
+  .h-step .h-icon{width:68px;height:68px;border-radius:50%;background:#fff;border:2px solid var(--terracotta);display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 18px;}
+  .h-step h4{font-size:15.5px;margin-bottom:8px;}
+  .h-step p{font-size:13.5px;color:#666;}
 
   /* PROCESS */
   .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:step;}
@@ -142,9 +174,13 @@
     .badges{grid-template-columns:repeat(2,1fr);}
     .product-grid{grid-template-columns:1fr 1fr;}
     .process-grid{grid-template-columns:1fr 1fr;}
+    .harvest-grid{grid-template-columns:1fr 1fr;}
+    .harvest-grid::before{display:none;}
     .footer-grid{grid-template-columns:1fr;}
     .form-row{grid-template-columns:1fr;}
     .hero h1{font-size:32px;}
+    .vista{height:360px;}
+    .vista-text h3{font-size:24px;}
   }
 </style>
 </head>
@@ -155,6 +191,7 @@
     <div class="brand">D A <span>TRADERS</span></div>
     <div class="nav-links">
       <a href="#origin">Our Origin</a>
+      <a href="#harvest">Our Process</a>
       <a href="#products">Products</a>
       <a href="#why">Why Us</a>
       <a href="#process">How to Order</a>
@@ -168,7 +205,7 @@
   <div class="container hero-inner">
     <div class="eyebrow">Wayanad · Kerala · India</div>
     <h1>Straight from the Hills of Kerala — <em>Nothing but Authentic</em></h1>
-    <p class="tag">D A TRADERS grows, grades and exports pepper, cardamom, ginger, turmeric, cloves and coffee — sourced directly from the misty hill farms of Wayanad, with nothing added and nothing hidden.</p>
+    <p class="tag">D A TRADERS trades rubber, coffee, areca nut (adakka) and black pepper — sourced directly from the misty hill farms of Wayanad, wholesale and retail, with nothing added and nothing hidden.</p>
     <div class="hero-btns">
       <a href="#contact" class="btn btn-primary">Request a Quote</a>
       <a href="#origin" class="btn btn-outline">Our Story</a>
@@ -185,18 +222,68 @@
   </div>
 </div>
 
+<div class="kerala-divider" aria-hidden="true"></div>
+
+<div class="vista" aria-hidden="true">
+  <div class="hill-layer l3"></div>
+  <div class="hill-layer l2"></div>
+  <div class="hill-layer l1"></div>
+  <div class="fog"></div>
+  <div class="vista-text">
+    <div class="eyebrow">The Wayanad Vista</div>
+    <h3>Cool mist over the Western Ghats, every morning of the year</h3>
+    <p>Wayanad sits over 700 metres up, where the fog settles into the valleys until mid-morning and the air stays cool and humid year-round — the exact conditions that give this land its character, and its produce theirs.</p>
+  </div>
+</div>
+
+<div class="kerala-divider" aria-hidden="true"></div>
+
 <section class="origin" id="origin">
   <div class="container origin-grid">
     <div class="origin-art" aria-hidden="true"></div>
     <div class="origin-text">
       <div class="eyebrow-dark">Our Origin</div>
       <h3>Born in the Western Ghats, Traded with Honesty</h3>
-      <p>Wayanad sits high in Kerala's Western Ghats — cool, misty, and rich with the biodiversity that gives its spices an intensity you won't find grown elsewhere. D A TRADERS works directly with the farmers of Nadavayal and the surrounding hills to bring that character to buyers, unaltered.</p>
-      <p>No blending. No shortcuts. Every batch is graded, moisture-tested and packed close to where it's grown — so what reaches you is exactly what left the hill.</p>
+      <p>Wayanad sits high in Kerala's Western Ghats — cool, misty, and rich with the biodiversity that gives its produce an intensity you won't find grown elsewhere. D A TRADERS works directly with the farmers of Nadavayal and the surrounding hills to bring that character to buyers, unaltered.</p>
+      <p>No blending. No shortcuts. Every batch is graded and packed close to where it's grown — so what reaches you is exactly what left the hill.</p>
       <div class="stat-row">
-        <div class="stat"><b>6+</b><span>Spice varieties</span></div>
+        <div class="stat"><b>4</b><span>Core products</span></div>
         <div class="stat"><b>670721</b><span>Wayanad PIN, origin-traceable</span></div>
         <div class="stat"><b>100%</b><span>Direct farm sourcing</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="kerala-divider" aria-hidden="true"></div>
+
+<section id="harvest">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow-dark">Our Process</div>
+      <h2>From the Hill to Your Hands</h2>
+      <p>Kerala tradition and standardised handling, at every stage.</p>
+    </div>
+    <div class="harvest-grid">
+      <div class="h-step">
+        <div class="h-icon">🖐️</div>
+        <h4>Harvested by Hand</h4>
+        <p>Picked the traditional way by farming families across the Wayanad hills, following the same seasonal rhythms as generations before.</p>
+      </div>
+      <div class="h-step">
+        <div class="h-icon">☀️</div>
+        <h4>Dried in the Open Sun</h4>
+        <p>Spread out and naturally sun-dried in the open air, the way it's always been done here — no shortcuts, no artificial drying.</p>
+      </div>
+      <div class="h-step">
+        <div class="h-icon">⚙️</div>
+        <h4>Processed to a Standard</h4>
+        <p>Cleaned, graded and processed at a standardised facility so every batch meets the same consistent quality.</p>
+      </div>
+      <div class="h-step">
+        <div class="h-icon">🔐</div>
+        <h4>Safely Stored</h4>
+        <p>Held in dry, moisture-controlled storage until it ships — protected from Wayanad's own humidity until it reaches you.</p>
       </div>
     </div>
   </div>
@@ -222,102 +309,4 @@
   <div class="container">
     <div class="section-head">
       <div class="eyebrow-dark">The Range</div>
-      <h2>Spices of the Hills</h2>
-      <p>Available for trial orders through full container loads.</p>
-    </div>
-    <div class="product-grid">
-      <div class="p-card"><div class="p-swatch" style="background:#2b2320;"></div><h4>Black Pepper</h4><p>Bold, pungent Malabar pepper — Wayanad's signature crop.</p><span class="p-tag">Whole · Powder</span></div>
-      <div class="p-card"><div class="p-swatch" style="background:#4a7a52;"></div><h4>Cardamom</h4><p>Hand-picked, hill-cured green cardamom with an intense aroma.</p><span class="p-tag">Bold Green · AGEB</span></div>
-      <div class="p-card"><div class="p-swatch" style="background:#d9c48f;"></div><h4>Ginger</h4><p>Fresh and dried ginger with high oleoresin content.</p><span class="p-tag">Fresh · Dried · Powder</span></div>
-      <div class="p-card"><div class="p-swatch" style="background:#d99a2b;"></div><h4>Turmeric</h4><p>High-curcumin turmeric fingers, sun-dried and polished.</p><span class="p-tag">Finger · Powder</span></div>
-      <div class="p-card"><div class="p-swatch" style="background:#5b3a29;"></div><h4>Cloves</h4><p>Full-bodied, high-oil-content cloves from the hill estates.</p><span class="p-tag">Whole · Powder</span></div>
-      <div class="p-card"><div class="p-swatch" style="background:#3e2c22;"></div><h4>Coffee (Robusta)</h4><p>Shade-grown Wayanad Robusta with a full-bodied cup.</p><span class="p-tag">Cherry · Parchment</span></div>
-    </div>
-  </div>
-</section>
-
-<section id="process">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow-dark">How to Order</div>
-      <h2>From Inquiry to Delivery</h2>
-    </div>
-    <div class="process-grid">
-      <div class="step"><h4>Inquire &amp; Sample</h4><p>Tell us the product, quantity and destination. We send pricing and a sample.</p></div>
-      <div class="step"><h4>Confirm Order</h4><p>Approve the sample, agree terms, and confirm your order.</p></div>
-      <div class="step"><h4>Grade &amp; Pack</h4><p>We inspect, grade and export-pack your order at origin.</p></div>
-      <div class="step"><h4>Ship &amp; Track</h4><p>Documentation, shipping and tracking handled through to your port.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="quote" id="contact">
-  <div class="container quote-grid">
-    <div class="quote-info">
-      <div class="eyebrow-dark">Get in Touch</div>
-      <h3>Request a Quote</h3>
-      <p>Tell us what you need — sample quantities or full container loads — and we'll respond with pricing and lead times.</p>
-      <div class="info-line"><b>Address:</b> Nadavayal Road, Cheengode, Panamaram, Wayanad, Kerala 670721, India</div>
-      <div class="info-line"><b>Email:</b> Abhin@datraders.in</div>
-      <div class="info-line"><b>Hours:</b> Mon–Fri, 9:00 am – 5:00 pm IST</div>
-    </div>
-    <form onsubmit="event.preventDefault(); alert('Thanks — replace this form action with your email/CRM integration.');">
-      <div class="form-row">
-        <div><label>Name</label><input type="text" required></div>
-        <div><label>Company</label><input type="text"></div>
-      </div>
-      <div class="form-row">
-        <div><label>Email</label><input type="email" required></div>
-        <div><label>Country</label><input type="text"></div>
-      </div>
-      <div class="form-row">
-        <div>
-          <label>Product of Interest</label>
-          <select>
-            <option>Black Pepper</option>
-            <option>Cardamom</option>
-            <option>Ginger</option>
-            <option>Turmeric</option>
-            <option>Cloves</option>
-            <option>Coffee</option>
-          </select>
-        </div>
-        <div><label>Quantity</label><input type="text" placeholder="e.g. 5 MT"></div>
-      </div>
-      <div class="form-row">
-        <div class="full"><label>Message</label><textarea rows="3"></textarea></div>
-      </div>
-      <button class="submit-btn" type="submit">Send Inquiry</button>
-    </form>
-  </div>
-</section>
-
-<footer>
-  <div class="container footer-grid">
-    <div>
-      <h4>D A TRADERS</h4>
-      <p>Wholesale exporters of authentic Wayanad-grown spices and coffee — from the hills of Kerala to buyers worldwide.</p>
-    </div>
-    <div>
-      <h4>Explore</h4>
-      <ul>
-        <li><a href="#origin">Our Origin</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#process">How to Order</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Contact</h4>
-      <ul>
-        <li>Nadavayal, Wayanad, Kerala 670721</li>
-        <li>Abhin@datraders.in</li>
-      </ul>
-    </div>
-  </div>
-  <div class="container footer-bottom">
-    © 2026 D A TRADERS. All Rights Reserved.
-  </div>
-</footer>
-
-</body>
-</html>
+      <h2>Produce of 
