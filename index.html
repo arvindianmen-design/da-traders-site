@@ -4,11 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>D A TRADERS — Straight from the Hills of Kerala</title>
-<meta name="description" content="D A TRADERS is a wholesale and retail trader from Wayanad, Kerala, offering authentic hill-grown rubber, coffee, areca nut (adakka) and black pepper.">
+<meta name="description" content="D A TRADERS is a wholesale and retail trader from Wayanad, Kerala, offering authentic hill-grown coffee, black &amp; white pepper, cardamom, areca nut (adakka) and rubber.">
 <meta property="og:title" content="D A TRADERS — Straight from the Hills of Kerala">
-<meta property="og:description" content="Wholesale and retail trader from Wayanad, Kerala — authentic hill-grown rubber, coffee, areca nut (adakka) and black pepper, sourced direct from the farm.">
+<meta property="og:description" content="Wholesale and retail trader from Wayanad, Kerala — authentic hill-grown coffee, pepper, cardamom, areca nut and rubber, sourced direct from the farm.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://datraders.in/">
+<meta property="og:image" content="https://datraders.in/assets/coffee-cherry-harvest.jpg">
 <link rel="canonical" href="https://datraders.in/">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%231f3d2b'/%3E%3Ctext x='32' y='43' font-family='Georgia, serif' font-size='24' font-weight='700' fill='%23d4a017' text-anchor='middle'%3EDA%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +20,7 @@
   "@type": "Organization",
   "name": "D A TRADERS",
   "url": "https://datraders.in/",
-  "description": "Wholesale and retail trader of authentic Wayanad-grown rubber, coffee, areca nut (adakka) and black pepper, sourced directly from hill farms in Kerala, India.",
+  "description": "Wholesale and retail trader of authentic Wayanad-grown coffee, black &amp; white pepper, cardamom, areca nut (adakka) and rubber, sourced directly from hill farms in Kerala, India.",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Nadavayal Road, Cheengode, Panamaram",
@@ -65,24 +66,27 @@ nav{position:relative;display:flex;align-items:center;justify-content:space-betw
 .nav-toggle{display:none;background:none;border:none;font-size:24px;color:var(--forest);cursor:pointer;padding:4px 6px;}
 
 /* HERO */
-.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#2c5240 0%,#1f3d2b 55%,#16281b 100%);color:#fff;padding:110px 24px 140px;text-align:center;}
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#2c5240 0%,#1f3d2b 55%,#16281b 100%);color:#fff;padding:80px 24px 0;}
 .hero::before{content:"";position:absolute;inset:0;opacity:.15;
 background-image:radial-gradient(circle at 20% 30%, #fff 0 2px, transparent 3px),
 radial-gradient(circle at 70% 60%, #fff 0 2px, transparent 3px),
 radial-gradient(circle at 40% 80%, #fff 0 1.5px, transparent 2.5px);
 background-size:180px 180px;}
-.hills{position:absolute;bottom:-2px;left:0;width:100%;line-height:0;}
-.hero-inner{position:relative;max-width:720px;margin:0 auto;}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;max-width:1140px;margin:0 auto;padding-bottom:56px;}
 .eyebrow{letter-spacing:3px;text-transform:uppercase;font-size:13px;color:var(--gold);font-weight:600;margin-bottom:18px;}
-.hero h1{font-size:46px;line-height:1.25;font-weight:800;color:#fff;margin-bottom:20px;}
+.hero h1{font-size:44px;line-height:1.22;font-weight:800;color:#fff;margin-bottom:20px;}
 .hero h1 em{color:var(--gold);font-style:normal;}
-.hero p.tag{font-size:19px;color:#e8e2d2;max-width:560px;margin:0 auto 34px;}
-.hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+.hero p.tag{font-size:18px;color:#e8e2d2;max-width:520px;margin:0 0 32px;}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;}
 .btn{padding:14px 30px;border-radius:32px;font-weight:600;font-size:15px;display:inline-block;transition:.2s;}
 .btn-primary{background:var(--terracotta);color:#fff;}
 .btn-primary:hover{background:#a3380b;transform:translateY(-2px);}
 .btn-outline{border:1.5px solid #e8e2d2;color:#fff;}
 .btn-outline:hover{background:rgba(255,255,255,.1);}
+.hero-photo{position:relative;border-radius:20px;overflow:hidden;box-shadow:0 24px 50px rgba(0,0,0,.35);aspect-ratio:3/3.6;}
+.hero-photo img{width:100%;height:100%;object-fit:cover;}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(19,36,25,0) 55%,rgba(19,36,25,.55) 100%);}
+.hero-photo .cap{position:absolute;bottom:14px;left:16px;right:16px;color:#f0ead9;font-size:11.5px;letter-spacing:.3px;z-index:2;}
 
 /* TRUST STRIP */
 .trust{background:var(--forest-dark);color:#dcd3ba;padding:18px 0;font-size:14px;}
@@ -96,55 +100,65 @@ section{padding:90px 0;}
 .section-head h2{font-size:34px;margin-bottom:14px;}
 .section-head p{color:#5c5c5c;font-size:16px;}
 
-/* ORIGIN STORY */
+/* HERITAGE BANNER (photo) */
+.heritage{position:relative;height:320px;overflow:hidden;}
+.heritage img{width:100%;height:100%;object-fit:cover;filter:saturate(1.05);}
+.heritage::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(19,36,25,.82) 0%,rgba(19,36,25,.55) 45%,rgba(19,36,25,.35) 100%);}
+.heritage-text{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:0 24px;}
+.heritage-text .inner{max-width:1140px;margin:0 auto;width:100%;color:#fff;}
+.heritage-text h2{color:#fff;font-size:28px;max-width:520px;margin-bottom:10px;}
+.heritage-text p{color:#e6efe2;max-width:480px;font-size:14.5px;}
+
+/* ORIGIN (merged mega-section) */
 .origin{background:var(--cream-dark);}
 .origin-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
-.origin-art{position:relative;height:340px;border-radius:18px;overflow:hidden;background:
-linear-gradient(180deg,#cfe0d6 0%, #a9c7b3 30%, #6f9a7c 55%, #3f6b4c 75%, #1f3d2b 100%);}
-.origin-art::after{content:"";position:absolute;inset:0;
-background:linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.55) 100%);
-mask-image:linear-gradient(180deg, transparent 60%, black 100%);}
-.origin-art .layer{position:absolute;bottom:0;width:100%;}
+.origin-collage{display:grid;grid-template-columns:1.1fr .9fr;gap:14px;}
+.origin-collage img{width:100%;height:100%;object-fit:cover;border-radius:16px;}
+.origin-collage .tall{grid-row:1/3;height:100%;}
+.origin-collage .short{height:100%;}
+.collage-cap{grid-column:1/-1;font-size:11.5px;color:#8a8a7d;font-style:italic;margin-top:2px;}
 .origin-text h2{font-size:26px;margin-bottom:16px;}
 .origin-text p{color:#4a4a4a;margin-bottom:16px;}
-.stat-row{display:flex;gap:36px;margin-top:26px;}
+.stat-row{display:flex;gap:36px;margin-top:22px;margin-bottom:6px;}
 .stat{font-family:'Playfair Display',serif;}
 .stat b{display:block;font-size:28px;color:var(--terracotta);}
 .stat span{font-size:13px;color:#666;font-family:'Poppins',sans-serif;}
 
-/* AUTHENTICITY BADGES */
-.badges{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
-.badge{background:#fff;border:1px solid var(--mist);border-radius:14px;padding:30px 20px;text-align:center;transition:.2s;}
-.badge:hover{transform:translateY(-4px);box-shadow:0 12px 24px rgba(31,61,43,.08);}
-.badge .icon{width:52px;height:52px;margin:0 auto 16px;border-radius:50%;background:var(--forest);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:22px;}
-.badge h4{font-size:16px;margin-bottom:8px;}
-.badge p{font-size:13.5px;color:#666;}
+/* COMPLIANCE + BADGES */
+.compliance-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px;}
+.c-badge{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--mist);border-radius:12px;padding:14px 16px;}
+.c-badge .c-icon{width:38px;height:38px;flex:none;border-radius:50%;background:var(--forest);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:16px;}
+.c-badge b{display:block;font-size:13px;color:var(--forest);}
+.c-badge span{display:block;font-size:11.5px;color:#666;margin-top:2px;}
 
-/* MARKET / PRICE TRANSPARENCY */
-.market{background:var(--forest-dark);}
-.market .section-head h2, .market .eyebrow-dark{color:#fff;}
-.market .eyebrow-dark{color:var(--gold);}
-.market .section-head p{color:#c7d4cb;}
-.market-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
-.m-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:26px;}
-.m-card h4{color:#fff;font-size:16px;margin-bottom:10px;font-family:'Poppins',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.4px;}
-.m-price{font-family:'Playfair Display',serif;font-weight:700;font-size:26px;color:var(--gold);margin-bottom:6px;}
-.m-price span{font-family:'Poppins',sans-serif;font-weight:400;font-size:13px;color:#c7d4cb;}
-.m-card p{color:#c7d4cb;font-size:13px;}
-.market-note{text-align:center;color:#a8b3a6;font-size:13px;margin-top:28px;}
-.market-note a{color:var(--gold);font-weight:600;}
+.harvest-strip{margin-top:44px;padding-top:36px;border-top:1px solid #ddd3ba;}
+.harvest-strip .label{font-size:12px;letter-spacing:.4px;text-transform:uppercase;color:var(--terracotta);font-weight:700;margin-bottom:18px;}
+.harvest-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.h-step{text-align:center;padding:0 6px;}
+.h-step .h-icon{width:52px;height:52px;border-radius:50%;background:#fff;border:2px solid var(--terracotta);display:flex;align-items:center;justify-content:center;font-size:20px;margin:0 auto 10px;}
+.h-step h4{font-size:13.5px;margin-bottom:4px;}
+.h-step p{font-size:12px;color:#666;}
+
+/* MARKET STRIP (compact, inside products section) */
+.market-strip{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-bottom:46px;}
+.mini-price{background:var(--forest-dark);color:#fff;border-radius:30px;padding:10px 20px;font-size:13px;display:flex;align-items:center;gap:8px;}
+.mini-price b{color:var(--gold);font-family:'Playfair Display',serif;font-size:15px;}
+.market-note{text-align:center;color:#8a8a7d;font-size:12.5px;margin-top:8px;}
+.market-note a{color:var(--terracotta);font-weight:600;}
 
 /* PRODUCTS */
 .products{background:var(--forest);color:#fff;}
 .products .section-head h2, .products .eyebrow-dark{color:#fff;}
 .products .section-head p{color:#c7d4cb;}
-.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;}
-.p-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:28px;transition:.2s;}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.p-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;overflow:hidden;transition:.2s;}
 .p-card:hover{background:rgba(255,255,255,.11);}
-.p-swatch{width:56px;height:56px;border-radius:50%;margin-bottom:18px;}
-.p-card h4{color:#fff;font-size:19px;margin-bottom:8px;}
-.p-card p{color:#cfd9d2;font-size:14px;margin-bottom:14px;}
-.p-tag{display:inline-block;font-size:11.5px;letter-spacing:.5px;text-transform:uppercase;color:var(--gold);border:1px solid rgba(212,160,23,.5);padding:4px 10px;border-radius:20px;}
+.p-photo{width:100%;height:150px;object-fit:cover;}
+.p-swatch{width:52px;height:52px;border-radius:50%;margin:24px 0 0 24px;}
+.p-body{padding:20px 24px 24px;}
+.p-card h4{color:#fff;font-size:18px;margin-bottom:6px;}
+.p-card p{color:#cfd9d2;font-size:13.5px;margin-bottom:12px;}
+.p-tag{display:inline-block;font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:var(--gold);border:1px solid rgba(212,160,23,.5);padding:4px 10px;border-radius:20px;}
 
 /* KERALA DIVIDER */
 .kerala-divider{height:16px;background:
@@ -152,42 +166,73 @@ repeating-linear-gradient(45deg, var(--gold) 0 3px, transparent 3px 11px),
 repeating-linear-gradient(-45deg, var(--terracotta) 0 3px, transparent 3px 11px);
 opacity:.55;}
 
-/* VISTA / FOG BANNER */
-.vista{position:relative;height:440px;overflow:hidden;background:linear-gradient(180deg,#bcd4c4 0%,#8fb39c 30%,#5c8a6c 58%,#345c40 100%);}
-.hill-layer{position:absolute;bottom:0;left:0;width:100%;}
-.hill-layer.l3{height:82%;background:#5c8a6c;opacity:.65;clip-path:polygon(0 100%,0 78%,22% 58%,48% 76%,74% 54%,100% 70%,100% 100%);}
-.hill-layer.l2{height:68%;background:#3f6b4c;opacity:.85;clip-path:polygon(0 100%,0 66%,18% 46%,38% 64%,55% 40%,72% 60%,88% 36%,100% 52%,100% 100%);}
-.hill-layer.l1{height:52%;background:#25462f;opacity:1;clip-path:polygon(0 100%,0 58%,15% 36%,32% 62%,48% 26%,64% 52%,80% 18%,92% 46%,100% 30%,100% 100%);}
-.fog{position:absolute;top:0;left:-15%;width:130%;height:100%;z-index:4;filter:blur(9px);
-background:
-radial-gradient(ellipse 55% 26% at 18% 42%, rgba(255,255,255,.6) 0%, transparent 70%),
-radial-gradient(ellipse 45% 22% at 68% 62%, rgba(255,255,255,.45) 0%, transparent 70%),
-radial-gradient(ellipse 38% 18% at 42% 78%, rgba(255,255,255,.4) 0%, transparent 70%);
-animation: drift 24s ease-in-out infinite alternate;}
-@media (prefers-reduced-motion: reduce){ .fog{animation:none;} }
-@keyframes drift{ from{transform:translateX(0);} to{transform:translateX(5%);} }
-.vista-text{position:absolute;inset:0;z-index:5;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#fff;padding:0 24px;}
-.vista-text .eyebrow{color:var(--gold);}
-.vista-text h2{color:#fff;font-size:30px;max-width:640px;margin-bottom:14px;}
-.vista-text p{color:#e6efe2;max-width:560px;font-size:15.5px;}
+/* GRADING / TABS */
+.tabs{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:40px;}
+.tab-btn{padding:11px 22px;border-radius:30px;border:1.5px solid var(--mist);background:#fff;font-weight:600;font-size:13.5px;color:var(--forest);cursor:pointer;font-family:'Poppins',sans-serif;transition:.15s;}
+.tab-btn:hover{border-color:var(--terracotta);}
+.tab-btn.active{background:var(--forest);color:#fff;border-color:var(--forest);}
+.tab-panel{display:none;}
+.tab-panel.active{display:block;animation:fadeIn .25s ease;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+.grading-block{margin-bottom:32px;}
+.grading-block:last-child{margin-bottom:0;}
+.grading-block h3{font-size:18px;margin-bottom:14px;}
+.spec-line{font-size:13.5px;color:#5c5c5c;margin-top:10px;}
+.spec-line b{color:var(--forest);}
+.table-scroll{overflow-x:auto;border:1px solid var(--mist);border-radius:14px;}
+table.grade-table{width:100%;border-collapse:collapse;min-width:560px;background:#fff;}
+table.grade-table th{background:var(--cream-dark);text-align:left;font-size:12px;letter-spacing:.4px;text-transform:uppercase;color:var(--forest);padding:13px 18px;border-bottom:1px solid var(--mist);white-space:nowrap;}
+table.grade-table td{padding:13px 18px;font-size:13.5px;color:#4a4a4a;border-bottom:1px solid var(--mist);vertical-align:top;}
+table.grade-table tr:last-child td{border-bottom:none;}
+table.grade-table td b{color:var(--forest);}
+.tier-premium{display:inline-block;background:var(--gold);color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;padding:2px 9px;border-radius:20px;margin-left:8px;}
 
-/* HARVEST TIMELINE */
-.harvest-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative;}
-.harvest-grid::before{content:"";position:absolute;top:34px;left:10%;right:10%;height:2px;background:var(--mist);z-index:0;}
-.h-step{position:relative;text-align:center;padding:0 10px;z-index:1;}
-.h-step .h-icon{width:68px;height:68px;border-radius:50%;background:#fff;border:2px solid var(--terracotta);display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 18px;}
-.h-step h4{font-size:15.5px;margin-bottom:8px;}
-.h-step p{font-size:13.5px;color:#666;}
+/* BLENDS (inside tab) */
+.blend-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:center;}
+.blend-card{background:#fff;border:1px solid var(--mist);border-radius:18px;padding:30px;}
+.blend-card h4{font-size:20px;margin-bottom:12px;}
+.ratio-bar{display:flex;height:36px;border-radius:10px;overflow:hidden;margin-bottom:10px;font-family:'Poppins',sans-serif;font-weight:600;font-size:13px;}
+.ratio-bar span{display:flex;align-items:center;justify-content:center;color:#fff;}
+.ratio-arabica{background:var(--terracotta);width:80%;}
+.ratio-robusta{background:var(--forest);width:20%;}
+.ratio-legend{display:flex;gap:20px;font-size:13px;color:#5c5c5c;margin-bottom:18px;}
+.ratio-legend b{color:var(--charcoal);}
+.blend-card p{color:#4a4a4a;margin-bottom:10px;font-size:14px;}
+.custom-blend{background:var(--forest);color:#fff;border-radius:16px;padding:28px;}
+.custom-blend h4{color:#fff;font-size:17px;margin-bottom:10px;}
+.custom-blend p{color:#cfd9d2;font-size:13.5px;margin-bottom:14px;}
+.ratio-chips{display:flex;flex-wrap:wrap;gap:10px;}
+.ratio-chip{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:#fff;font-size:12.5px;padding:7px 13px;border-radius:20px;}
 
-/* PROCESS */
-.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:step;}
-.step{position:relative;padding:34px 22px 22px;background:#fff;border:1px solid var(--mist);border-radius:14px;}
-.step::before{counter-increment:step;content:counter(step);position:absolute;top:-18px;left:22px;width:36px;height:36px;border-radius:50%;background:var(--terracotta);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:'Playfair Display',serif;}
-.step h4{font-size:16px;margin-bottom:8px;}
-.step p{font-size:13.5px;color:#666;}
+.roast-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px;}
+.roast-card{background:#fff;border:1px solid var(--mist);border-radius:14px;padding:22px;text-align:center;}
+.roast-swatch{width:100%;height:12px;border-radius:8px;margin-bottom:14px;}
+.roast-swatch.light{background:#c99a6b;}
+.roast-swatch.medium{background:#7a5230;}
+.roast-swatch.dark{background:#2c1c12;box-shadow:inset 0 -2px 4px rgba(255,255,255,.25);}
+.roast-card h4{font-size:15.5px;margin-bottom:4px;}
+.roast-temp{font-family:'Poppins',sans-serif;font-weight:600;color:var(--terracotta);font-size:13px;margin-bottom:10px;}
+.roast-card p{font-size:12.5px;color:#666;}
+.moisture-note{margin-top:26px;background:var(--cream-dark);border:1px solid var(--mist);border-radius:14px;padding:18px 22px;display:flex;align-items:center;gap:16px;}
+.moisture-note .m-icon{font-size:24px;}
+.moisture-note b{color:var(--forest);}
+.moisture-note p{font-size:13px;color:#4a4a4a;margin:0;}
 
-/* QUOTE / CONTACT */
+/* CTA BANNER */
+.cta-banner{background:linear-gradient(135deg,var(--forest) 0%,var(--forest-dark) 100%);color:#fff;text-align:center;padding:64px 0;}
+.cta-banner h2{color:#fff;font-size:28px;margin-bottom:12px;}
+.cta-banner p{color:#c7d4cb;max-width:520px;margin:0 auto 26px;font-size:15.5px;}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+.btn-whatsapp{background:var(--whatsapp);color:#fff;}
+.btn-whatsapp:hover{background:#1ebe5b;}
+
+/* FINAL: ORDER PROCESS + CONTACT */
 .quote{background:var(--cream-dark);}
+.process-mini{display:flex;flex-wrap:wrap;justify-content:center;gap:0;margin-bottom:54px;counter-reset:mstep;}
+.mstep{display:flex;align-items:center;gap:10px;padding:0 22px;position:relative;}
+.mstep::before{counter-increment:mstep;content:counter(mstep);width:30px;height:30px;flex:none;border-radius:50%;background:var(--terracotta);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:'Playfair Display',serif;font-size:13px;}
+.mstep span{font-size:13.5px;font-weight:600;color:var(--forest);}
+.mstep:not(:last-child)::after{content:"→";margin-left:22px;color:#c8bd9d;font-size:16px;}
 .quote-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;}
 .quote-info h2{font-size:26px;margin-bottom:16px;}
 .quote-info p{color:#4a4a4a;margin-bottom:22px;}
@@ -212,7 +257,7 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--terracotta);}
 /* WHATSAPP FLOATING BUTTON */
 .wa-float{position:fixed;bottom:22px;right:22px;z-index:60;background:var(--whatsapp);color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(0,0,0,.25);font-size:28px;transition:.2s;}
 .wa-float:hover{transform:scale(1.08);background:#1ebe5b;}
-.wa-float:focus-visible, .nav-cta:focus-visible, .btn:focus-visible, .submit-btn:focus-visible{outline:3px solid var(--gold);outline-offset:2px;}
+.wa-float:focus-visible, .nav-cta:focus-visible, .btn:focus-visible, .submit-btn:focus-visible, .tab-btn:focus-visible{outline:3px solid var(--gold);outline-offset:2px;}
 
 /* FOOTER */
 footer{background:var(--forest-dark);color:#b9c2b8;padding:56px 0 28px;}
@@ -229,87 +274,26 @@ footer li{margin-bottom:10px;}
 .nav-links.open{display:flex;}
 .nav-links a{padding:10px 0;border-bottom:1px solid var(--mist);}
 .nav-links a:last-child{border-bottom:none;}
+.hero-grid{grid-template-columns:1fr;text-align:center;padding-bottom:36px;}
+.hero p.tag{margin:0 auto 32px;}
+.hero-btns{justify-content:center;}
+.hero-photo{max-width:320px;margin:0 auto;}
 .origin-grid,.quote-grid{grid-template-columns:1fr;}
-.badges{grid-template-columns:repeat(2,1fr);}
-.market-grid{grid-template-columns:1fr;}
-.product-grid{grid-template-columns:1fr 1fr;}
-.process-grid{grid-template-columns:1fr 1fr;}
-.harvest-grid{grid-template-columns:1fr 1fr;}
-.harvest-grid::before{display:none;}
-.footer-grid{grid-template-columns:1fr;}
-.form-row{grid-template-columns:1fr;}
-.hero h1{font-size:32px;}
-.vista{height:360px;}
-.vista-text h2{font-size:24px;}
-.wa-float{width:52px;height:52px;font-size:24px;bottom:16px;right:16px;}
-}
-
-/* COMPLIANCE STRIP */
-.compliance-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px;}
-.c-badge{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--mist);border-radius:12px;padding:16px 18px;}
-.c-badge .c-icon{width:42px;height:42px;flex:none;border-radius:50%;background:var(--forest);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:18px;}
-.c-badge b{display:block;font-size:13.5px;color:var(--forest);}
-.c-badge span{display:block;font-size:12px;color:#666;margin-top:2px;}
-
-/* BLENDS */
-.blends{background:var(--cream-dark);}
-.blend-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;}
-.blend-card{background:#fff;border:1px solid var(--mist);border-radius:18px;padding:34px;}
-.blend-card .eyebrow-dark{margin-bottom:6px;}
-.blend-card h3{font-size:24px;margin-bottom:14px;}
-.ratio-bar{display:flex;height:38px;border-radius:10px;overflow:hidden;margin-bottom:10px;font-family:'Poppins',sans-serif;font-weight:600;font-size:13px;}
-.ratio-bar span{display:flex;align-items:center;justify-content:center;color:#fff;}
-.ratio-arabica{background:var(--terracotta);width:80%;}
-.ratio-robusta{background:var(--forest);width:20%;}
-.ratio-legend{display:flex;gap:20px;font-size:13px;color:#5c5c5c;margin-bottom:20px;}
-.ratio-legend b{color:var(--charcoal);}
-.blend-card p{color:#4a4a4a;margin-bottom:10px;font-size:14.5px;}
-.custom-blend{background:var(--forest);color:#fff;border-radius:16px;padding:30px;}
-.custom-blend h4{color:#fff;font-size:18px;margin-bottom:10px;}
-.custom-blend p{color:#cfd9d2;font-size:14px;margin-bottom:16px;}
-.ratio-chips{display:flex;flex-wrap:wrap;gap:10px;}
-.ratio-chip{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:#fff;font-size:13px;padding:8px 14px;border-radius:20px;}
-
-/* ROAST PROFILES */
-.roast-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
-.roast-card{background:#fff;border:1px solid var(--mist);border-radius:14px;padding:26px;text-align:center;}
-.roast-swatch{width:100%;height:14px;border-radius:8px;margin-bottom:18px;}
-.roast-swatch.light{background:#c99a6b;}
-.roast-swatch.medium{background:#7a5230;}
-.roast-swatch.dark{background:#2c1c12;box-shadow:inset 0 -2px 4px rgba(255,255,255,.25);}
-.roast-card h4{font-size:17px;margin-bottom:6px;}
-.roast-temp{font-family:'Poppins',sans-serif;font-weight:600;color:var(--terracotta);font-size:14px;margin-bottom:12px;}
-.roast-card p{font-size:13.5px;color:#666;}
-.moisture-note{margin-top:36px;background:var(--cream-dark);border:1px solid var(--mist);border-radius:14px;padding:22px 26px;display:flex;align-items:center;gap:18px;}
-.moisture-note .m-icon{font-size:28px;}
-.moisture-note b{color:var(--forest);}
-.moisture-note p{font-size:14px;color:#4a4a4a;margin:0;}
-
-/* GRADING TABLES */
-.grading-block{margin-bottom:44px;}
-.grading-block:last-child{margin-bottom:0;}
-.grading-block h3{font-size:19px;margin-bottom:16px;}
-.table-scroll{overflow-x:auto;border:1px solid var(--mist);border-radius:14px;}
-table.grade-table{width:100%;border-collapse:collapse;min-width:560px;background:#fff;}
-table.grade-table th{background:var(--cream-dark);text-align:left;font-size:12px;letter-spacing:.4px;text-transform:uppercase;color:var(--forest);padding:14px 18px;border-bottom:1px solid var(--mist);white-space:nowrap;}
-table.grade-table td{padding:14px 18px;font-size:14px;color:#4a4a4a;border-bottom:1px solid var(--mist);vertical-align:top;}
-table.grade-table tr:last-child td{border-bottom:none;}
-table.grade-table td b{color:var(--forest);}
-.tier-premium{display:inline-block;background:var(--gold);color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;padding:2px 9px;border-radius:20px;margin-left:8px;}
-
-/* CTA BANNER */
-.cta-banner{background:linear-gradient(135deg,var(--forest) 0%,var(--forest-dark) 100%);color:#fff;text-align:center;}
-.cta-banner h2{color:#fff;font-size:30px;margin-bottom:12px;}
-.cta-banner p{color:#c7d4cb;max-width:520px;margin:0 auto 30px;font-size:16px;}
-.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
-.btn-whatsapp{background:var(--whatsapp);color:#fff;}
-.btn-whatsapp:hover{background:#1ebe5b;}
-
-@media(max-width:860px){
+.origin-collage{grid-template-columns:1fr 1fr;}
 .compliance-strip{grid-template-columns:1fr;}
+.harvest-grid{grid-template-columns:1fr 1fr;}
+.product-grid{grid-template-columns:1fr 1fr;}
 .blend-grid{grid-template-columns:1fr;}
 .roast-grid{grid-template-columns:1fr;}
 .moisture-note{flex-direction:column;text-align:center;}
+.footer-grid{grid-template-columns:1fr;}
+.form-row{grid-template-columns:1fr;}
+.hero h1{font-size:32px;}
+.heritage{height:280px;}
+.heritage-text h2{font-size:22px;}
+.mstep{padding:6px 14px;}
+.mstep:not(:last-child)::after{margin-left:14px;}
+.wa-float{width:52px;height:52px;font-size:24px;bottom:16px;right:16px;}
 }
 </style>
 </head>
@@ -320,11 +304,8 @@ table.grade-table td b{color:var(--forest);}
 <div class="brand">D A <span>TRADERS</span></div>
 <div class="nav-links" id="navLinks">
 <a href="#origin">Our Origin</a>
-<a href="#market">Market Prices</a>
-<a href="#products">Products</a>
-<a href="#blends">Blends</a>
-<a href="#grading">Grading</a>
-<a href="#process">How to Order</a>
+<a href="#products">Products &amp; Prices</a>
+<a href="#grading">Grading &amp; Specs</a>
 <a href="#contact">Contact</a>
 </div>
 <a href="#contact" class="nav-cta">Get a Quote</a>
@@ -333,13 +314,19 @@ table.grade-table td b{color:var(--forest);}
 </header>
 
 <section class="hero">
-<div class="container hero-inner">
+<div class="hero-grid">
+<div class="hero-copy">
 <div class="eyebrow">Wayanad · Kerala · India</div>
 <h1>Straight from the Hills of Kerala — <em>Nothing but Authentic</em></h1>
-<p class="tag">D A TRADERS trades rubber, coffee, areca nut (adakka) and black pepper — sourced directly from the misty hill farms of Wayanad, wholesale and retail, with nothing added and nothing hidden.</p>
+<p class="tag">D A TRADERS trades coffee, black &amp; white pepper, cardamom, areca nut (adakka) and rubber — sourced directly from the misty hill farms of Wayanad, wholesale and retail, with nothing added and nothing hidden.</p>
 <div class="hero-btns">
 <a href="#contact" class="btn btn-primary">Request a Quote</a>
 <a href="#origin" class="btn btn-outline">Our Story</a>
+</div>
+</div>
+<div class="hero-photo">
+<img src="assets/coffee-cherry-harvest.jpg" alt="Coffee cherries being hand-harvested — representative image of Wayanad-style hill coffee picking" loading="eager">
+<div class="cap">Coffee cherry harvest — representative image</div>
 </div>
 </div>
 </section>
@@ -353,133 +340,55 @@ table.grade-table td b{color:var(--forest);}
 </div>
 </div>
 
-<div class="kerala-divider" aria-hidden="true"></div>
-
-<div class="vista" aria-hidden="true">
-<div class="hill-layer l3"></div>
-<div class="hill-layer l2"></div>
-<div class="hill-layer l1"></div>
-<div class="fog"></div>
-<div class="vista-text">
-<div class="eyebrow">The Wayanad Vista</div>
-<h2>Cool mist over the Western Ghats, every morning of the year</h2>
-<p>Wayanad sits over 700 metres up, where the fog settles into the valleys until mid-morning and the air stays cool and humid year-round — the exact conditions that give this land its character, and its produce theirs.</p>
+<div class="heritage">
+<img src="assets/pepper-heritage-scoop.jpg" alt="Black and green peppercorns with a wooden scoop, rope and map — spice trade heritage styling">
+<div class="heritage-text">
+<div class="inner">
+<div class="eyebrow">A Trade as Old as the Hills</div>
+<h2>Kerala has traded pepper and spice for over two thousand years. We still do it the honest way.</h2>
+<p>No anonymous middlemen, no blended lots of unknown origin — just the same hill-to-port relationship that's defined Malabar's spice trade for generations, run to a modern standard.</p>
 </div>
 </div>
-
-<div class="kerala-divider" aria-hidden="true"></div>
+</div>
 
 <section class="origin" id="origin">
-<div class="container origin-grid">
-<div class="origin-art" aria-hidden="true"></div>
+<div class="container">
+<div class="origin-grid">
+<div class="origin-collage" aria-hidden="true">
+<img class="tall" src="assets/pepper-vine.jpg" alt="Black pepper vine with green peppercorn spikes">
+<img class="short" src="assets/coffee-cherry-harvest.jpg" alt="Coffee cherries in a harvest basket">
+</div>
 <div class="origin-text">
 <div class="eyebrow-dark">Our Origin</div>
 <h2>Born in the Western Ghats, Traded with Honesty</h2>
 <p>Wayanad sits high in Kerala's Western Ghats — cool, misty, and rich with the biodiversity that gives its produce an intensity you won't find grown elsewhere. D A TRADERS works directly with the farmers of Nadavayal and the surrounding hills to bring that character to buyers, unaltered.</p>
 <p>No blending. No shortcuts. Every batch is graded and packed close to where it's grown — so what reaches you is exactly what left the hill.</p>
 <div class="stat-row">
-<div class="stat"><b>4</b><span>Core products</span></div>
+<div class="stat"><b>6</b><span>Core products</span></div>
 <div class="stat"><b>670721</b><span>Wayanad PIN, origin-traceable</span></div>
 <div class="stat"><b>100%</b><span>Direct farm sourcing</span></div>
 </div>
 <div class="compliance-strip">
 <div class="c-badge"><div class="c-icon">🌍</div><div><b>Zero-Intermediary Chain</b><span>Farm to export, no middle trade</span></div></div>
-<div class="c-badge"><div class="c-icon">🔎</div><div><b>Lot-Level Traceability</b><span>Every batch tracked to its source farm</span></div></div>
-<div class="c-badge"><div class="c-icon">📋</div><div><b>Export-Grade Quality Control</b><span>Moisture, purity &amp; grade checked per lot</span></div></div>
+<div class="c-badge"><div class="c-icon">🔎</div><div><b>Lot-Level Traceability</b><span>Every batch tracked to source</span></div></div>
+<div class="c-badge"><div class="c-icon">📋</div><div><b>Export-Grade QC</b><span>Moisture, purity &amp; grade checked</span></div></div>
+</div>
+</div>
+</div>
+
+<div class="harvest-strip">
+<div class="label">From the Hill to Your Hands</div>
+<div class="harvest-grid">
+<div class="h-step"><div class="h-icon">🖐️</div><h4>Harvested by Hand</h4><p>Picked the traditional way, following the same seasonal rhythms as generations before.</p></div>
+<div class="h-step"><div class="h-icon">☀️</div><h4>Sun-Dried</h4><p>Naturally dried in the open air — no shortcuts, no artificial drying.</p></div>
+<div class="h-step"><div class="h-icon">⚙️</div><h4>Graded to Standard</h4><p>Cleaned, sized and graded so every batch is consistent.</p></div>
+<div class="h-step"><div class="h-icon">🔐</div><h4>Safely Stored</h4><p>Moisture-controlled storage, protected until it ships.</p></div>
 </div>
 </div>
 </div>
 </section>
 
 <div class="kerala-divider" aria-hidden="true"></div>
-
-<section id="harvest">
-<div class="container">
-<div class="section-head">
-<div class="eyebrow-dark">Our Process</div>
-<h2>From the Hill to Your Hands</h2>
-<p>Kerala tradition and standardised handling, at every stage.</p>
-</div>
-<div class="harvest-grid">
-<div class="h-step">
-<div class="h-icon">🖐️</div>
-<h4>Harvested by Hand</h4>
-<p>Picked the traditional way by farming families across the Wayanad hills, following the same seasonal rhythms as generations before.</p>
-</div>
-<div class="h-step">
-<div class="h-icon">☀️</div>
-<h4>Dried in the Open Sun</h4>
-<p>Spread out and naturally sun-dried in the open air, the way it's always been done here — no shortcuts, no artificial drying.</p>
-</div>
-<div class="h-step">
-<div class="h-icon">⚙️</div>
-<h4>Processed to a Standard</h4>
-<p>Cleaned, graded and processed at a standardised facility so every batch meets the same consistent quality.</p>
-</div>
-<div class="h-step">
-<div class="h-icon">🔐</div>
-<h4>Safely Stored</h4>
-<p>Held in dry, moisture-controlled storage until it ships — protected from Wayanad's own humidity until it reaches you.</p>
-</div>
-</div>
-</div>
-</section>
-
-<section id="why">
-<div class="container">
-<div class="section-head">
-<div class="eyebrow-dark">Why Buyers Trust Us</div>
-<h2>Authenticity you can verify, quality you can rely on</h2>
-<p>Every claim we make about origin and quality is backed by how we actually source and pack.</p>
-</div>
-<div class="badges">
-<div class="badge"><div class="icon">🌱</div><h4>Farm-Direct</h4><p>Sourced from named farms across the Wayanad hills — no anonymous middle trade.</p></div>
-<div class="badge"><div class="icon">🔍</div><h4>Graded &amp; Tested</h4><p>Moisture, purity and grade checked on every lot before it's packed.</p></div>
-<div class="badge"><div class="icon">📦</div><h4>Export-Ready</h4><p>Packed to international standards with full documentation handled for you.</p></div>
-<div class="badge"><div class="icon">🤝</div><h4>Transparent Pricing</h4><p>Prices track local Wayanad markets, not distant, unreliable global signals.</p></div>
-</div>
-</div>
-</section>
-
-<section class="market" id="market">
-<div class="container">
-<div class="section-head">
-<div class="eyebrow-dark">Today's Market</div>
-<h2>Live Wayanad Reference Pricing</h2>
-<p>The rates our own quotes are built from — pulled from Wayanad and Idukki mandi &amp; auction sources.</p>
-</div>
-<div class="market-grid">
-<div class="m-card">
-<h4>Coffee</h4>
-<div class="m-price">₹220–222 <span>/ kg, Robusta</span></div>
-<p>Wayanad mandi average. Arabica parchment trades at a premium, typically ₹500–525/kg.</p>
-</div>
-<div class="m-card">
-<h4>Black Pepper</h4>
-<div class="m-price">₹680–706 <span>/ kg, ungarbled</span></div>
-<p>Wayanad markets. Bold garbled (MG1) lots trade above this baseline — ask for your grade's rate.</p>
-</div>
-<div class="m-card">
-<h4>Cardamom</h4>
-<div class="m-price">₹3,131–3,143 <span>/ kg</span></div>
-<p>Idukki e-auction average — the standard price-discovery channel for Kerala cardamom.</p>
-</div>
-</div>
-<div class="market-grid" style="margin-top:22px;">
-<div class="m-card">
-<h4>Wayanad APMC Mandi Rate</h4>
-<div class="m-price">₹215–225 <span>/ kg, base green coffee</span></div>
-<p>Kalpetta, Pulpally &amp; Sultan Bathery markets — the local benchmark our own quotes start from.</p>
-</div>
-<div class="m-card">
-<h4>DA Traders FOB / Export Rate</h4>
-<div class="m-price" style="font-size:18px;">Contact for live quote <span>graded, packed &amp; export-ready</span></div>
-<p>Built from the mandi baseline plus grading, processing and export packing — we won't quote a number here we can't stand behind on the day.</p>
-</div>
-</div>
-<p class="market-note">Reference prices as of 22 Aug 2026, synced against Wayanad mandi indices and checked periodically. Contact us for a real-time FOB export quote and free sample dispatch — see <a href="#contact">request a live quote</a>.</p>
-</div>
-</section>
 
 <section class="products" id="products">
 <div class="container">
@@ -488,30 +397,172 @@ table.grade-table td b{color:var(--forest);}
 <h2>Produce of the Hills</h2>
 <p>Traded wholesale and retail — from trial quantities through full container loads.</p>
 </div>
-<div class="product-grid">
-<div class="p-card"><div class="p-swatch" style="background:#2b2320;"></div><h4>Black Pepper</h4><p>Bold, pungent Malabar pepper — Wayanad's signature crop.</p><span class="p-tag">Whole · Powder</span></div>
-<div class="p-card"><div class="p-swatch" style="background:#3e2c22;"></div><h4>Coffee (Robusta &amp; Arabica)</h4><p>Shade-grown Wayanad Robusta and Arabica, sun-dried, with full-bodied character.</p><span class="p-tag">Cherry · Parchment</span></div>
-<div class="p-card"><div class="p-swatch" style="background:#8a6d3b;"></div><h4>Areca Nut (Adakka)</h4><p>Sun-dried areca nut from Wayanad's hill farms, a staple cash crop of the region.</p><span class="p-tag">Chali · Kottapak</span></div>
-<div class="p-card"><div class="p-swatch" style="background:#c9c2b0;"></div><h4>Rubber</h4><p>Field latex and sheet rubber from local estates, processed and graded for market.</p><span class="p-tag">RSS · Latex</span></div>
+
+<div class="market-strip">
+<div class="mini-price">Coffee <b>₹220–222/kg</b> Robusta</div>
+<div class="mini-price">Black Pepper <b>₹680–706/kg</b> ungarbled</div>
+<div class="mini-price">Cardamom <b>₹3,131–3,143/kg</b> Idukki auction</div>
+<div class="mini-price">FOB / Export <b>Contact for live quote</b></div>
 </div>
+
+<div class="product-grid">
+<div class="p-card">
+<img class="p-photo" src="assets/pepper-mortar.jpg" alt="Black peppercorns in a bowl with a mortar and pestle">
+<div class="p-body"><h4>Black Pepper</h4><p>Bold, pungent Malabar pepper — Wayanad's signature crop.</p><span class="p-tag">Garbled · Ungarbled</span></div>
+</div>
+<div class="p-card">
+<img class="p-photo" src="assets/white-pepper.jpg" alt="Dried white peppercorns, retted and cleaned">
+<div class="p-body"><h4>White Pepper</h4><p>Retted and cleaned for a cleaner, sharper heat — popular in light sauces and blends.</p><span class="p-tag">A1 · A2 · A3</span></div>
+</div>
+<div class="p-card">
+<img class="p-photo" src="assets/coffee-cups-trio.jpg" alt="Three cups showing brewed coffee, ground coffee and whole coffee beans">
+<div class="p-body"><h4>Coffee (Robusta &amp; Arabica)</h4><p>Shade-grown Wayanad Robusta and Arabica, sun-dried, full-bodied.</p><span class="p-tag">Cherry · Parchment</span></div>
+</div>
+<div class="p-card">
+<img class="p-photo" src="assets/cardamom-bowl.jpg" alt="Bowl of green cardamom pods">
+<div class="p-body"><h4>Cardamom</h4><p>Aromatic small cardamom, sized and colour-sorted to Idukki auction grade.</p><span class="p-tag">7mm · 8mm</span></div>
+</div>
+<div class="p-card">
+<div class="p-swatch" style="background:#8a6d3b;"></div>
+<div class="p-body"><h4>Areca Nut (Adakka)</h4><p>Sun-dried areca nut from Wayanad's hill farms, a staple cash crop of the region.</p><span class="p-tag">Chali · Kottapak</span></div>
+</div>
+<div class="p-card">
+<div class="p-swatch" style="background:#c9c2b0;"></div>
+<div class="p-body"><h4>Rubber</h4><p>Field latex and sheet rubber from local estates, processed and graded for market.</p><span class="p-tag">RSS · Latex</span></div>
+</div>
+</div>
+<p class="market-note">Reference prices as of 22 Aug 2026, synced against Wayanad &amp; Idukki mandi/auction indices. <a href="#contact">Request a live FOB quote</a> for export pricing.</p>
 </div>
 </section>
 
-<section class="blends" id="blends">
+<section id="grading">
 <div class="container">
 <div class="section-head">
-<div class="eyebrow-dark">Popular Blends</div>
-<h2>Coffee Blends &amp; Custom Mixes</h2>
-<p>Our most-requested cup, and a ratio built to your own specification.</p>
+<div class="eyebrow-dark">Grading Reference</div>
+<h2>Coffee &amp; Spice Grading Standards</h2>
+<p>Reference grading tiers used across the Indian coffee, pepper and cardamom trade — the specifications behind every quote we send.</p>
 </div>
+
+<div class="tabs" role="tablist">
+<button class="tab-btn active" data-tab="coffee" role="tab" aria-selected="true">Coffee</button>
+<button class="tab-btn" data-tab="pepper" role="tab" aria-selected="false">Black Pepper</button>
+<button class="tab-btn" data-tab="wpepper" role="tab" aria-selected="false">White Pepper</button>
+<button class="tab-btn" data-tab="cardamom" role="tab" aria-selected="false">Cardamom</button>
+<button class="tab-btn" data-tab="blends" role="tab" aria-selected="false">Blends &amp; Roast</button>
+</div>
+
+<div class="tab-panel active" id="tab-coffee">
+<div class="grading-block">
+<h3>Processing Methods</h3>
+<div class="table-scroll">
+<table class="grade-table">
+<thead><tr><th>Method</th><th>Applies To</th><th>Process</th><th>Cup Character</th></tr></thead>
+<tbody>
+<tr><td><b>Plantation</b></td><td>Washed Arabica</td><td>Pulped, fermented, washed before sun-drying</td><td>Clean, bright, highly aromatic</td></tr>
+<tr><td><b>Parchment</b></td><td>Washed Robusta</td><td>Wet-processed before drying</td><td>Smooth, clean cup, low bitterness</td></tr>
+<tr><td><b>Cherry</b></td><td>Natural / dry-processed Arabica &amp; Robusta</td><td>Sun-dried whole, inside the cherry fruit</td><td>Earthy, full-bodied, low-acidity</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="grading-block">
+<h3>Arabica — Plantation Series (Screen Size)</h3>
+<div class="table-scroll">
+<table class="grade-table">
+<thead><tr><th>Grade</th><th>Screen Size</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td><b>AAA / Plantation A</b><span class="tier-premium">Premium</span></td><td>18 / 19</td><td>Extra-large, high-altitude beans — top export tier</td></tr>
+<tr><td><b>Plantation B</b></td><td>15 / 16</td><td>Standard export grade, standard commercial blending</td></tr>
+<tr><td><b>Plantation C / Bulk</b></td><td>Below 14</td><td>Cost-effective — instant coffee &amp; commercial blends</td></tr>
+<tr><td><b>Peaberry (PB)</b><span class="tier-premium">Premium</span></td><td>Single round bean</td><td>Rare natural mutation — concentrated flavour, commands a premium</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="grading-block">
+<h3>Robusta — Cherry Series (Screen Size)</h3>
+<div class="table-scroll">
+<table class="grade-table">
+<thead><tr><th>Grade</th><th>Screen Size</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td><b>Mysore Nuggets Extra Bold (MNEB)</b><span class="tier-premium">Premium</span></td><td>18+</td><td>Largest, boldest Robusta cherry — top export grade</td></tr>
+<tr><td><b>Mysore Nuggets (MN)</b></td><td>16 / 18</td><td>Bold, dense, premium standard grade</td></tr>
+<tr><td><b>Robusta Cherry AB</b></td><td>14 / 16</td><td>Standard commercial export grade</td></tr>
+<tr><td><b>Robusta Bulk</b></td><td>Below 14</td><td>Mixed size, instant coffee &amp; commercial blends</td></tr>
+</tbody>
+</table>
+</div>
+<p class="spec-line"><b>Export Moisture Standard:</b> 11.0%–12.5% maximum, checked per lot before packing.</p>
+</div>
+</div>
+
+<div class="tab-panel" id="tab-pepper">
+<div class="grading-block">
+<h3>Black Pepper — Garbled &amp; Ungarbled Grades</h3>
+<div class="table-scroll">
+<table class="grade-table">
+<thead><tr><th>Grade</th><th>Density</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><b>TGSEB</b><br>Tellicherry Garbled Special Extra Bold<span class="tier-premium">Premium</span></td><td>≥ 600 g/L</td><td>Largest, densest berries — our top export grade</td></tr>
+<tr><td><b>TGEB</b><br>Tellicherry Garbled Extra Bold</td><td>≥ 550 g/L</td><td>Bold, uniform, high-value export grade</td></tr>
+<tr><td><b>TG</b><br>Tellicherry Garbled</td><td>≥ 500 g/L</td><td>Standard garbled export grade</td></tr>
+<tr><td><b>MG-1</b><br>Malabar Garbled-1</td><td>≥ 475 g/L</td><td>Premium standard commercial grade</td></tr>
+<tr><td><b>MUG</b><br>Malabar Ungarbled</td><td>Mixed</td><td>Baseline mandi grade, sorted to order on request</td></tr>
+<tr><td><b>Pinheads / Light Berries</b></td><td>Low</td><td>Smallest berries — typically used for oleoresin extraction</td></tr>
+</tbody>
+</table>
+</div>
+<p class="spec-line"><b>Moisture:</b> ≤ 10–12% &nbsp;|&nbsp; <b>Piperine content:</b> ≥ 4–6% (bioactive alkaloid, key quality marker) &nbsp;|&nbsp; <b>Purity:</b> ≥ 99%, extraneous matter ≤ 1%.</p>
+</div>
+</div>
+
+<div class="tab-panel" id="tab-wpepper">
+<div class="grading-block">
+<h3>White Pepper — Production &amp; Grades</h3>
+<p style="color:#4a4a4a;font-size:14.5px;margin-bottom:18px;">Produced by retting fully ripe red pepper berries in water to loosen and remove the outer skin (pericarp), leaving the clean white inner seed — a slower, more selective process than black pepper production.</p>
+<div class="table-scroll">
+<table class="grade-table">
+<thead><tr><th>Grade</th><th>Density</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><b>A1</b><span class="tier-premium">Premium</span></td><td>≥ 650 g/L</td><td>Finest, brightest white, whole and uniform — top export tier</td></tr>
+<tr><td><b>A2</b></td><td>≥ 600 g/L</td><td>Standard export grade, slight colour variance allowed</td></tr>
+<tr><td><b>A3</b></td><td>Below 600 g/L</td><td>Commercial grade, greater size and colour variance</td></tr>
+</tbody>
+</table>
+</div>
+<p class="spec-line"><b>Moisture:</b> ≤ 12.5% maximum, checked per lot before export packing.</p>
+</div>
+</div>
+
+<div class="tab-panel" id="tab-cardamom">
+<div class="grading-block">
+<h3>Small Cardamom — Alleppey Green Grades</h3>
+<div class="table-scroll">
+<table class="grade-table">
+<thead><tr><th>Grade</th><th>Size</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><b>AGEB</b><br>Alleppey Green Extra Bold<span class="tier-premium">Premium</span></td><td>≥ 8mm</td><td>Largest, boldest pods — top premium grade</td></tr>
+<tr><td><b>AGB</b><br>Alleppey Green Bold</td><td>7–8mm</td><td>Bold, uniform green colour</td></tr>
+<tr><td><b>AGS-1</b><br>Alleppey Green Superior-1</td><td>6.5–7mm</td><td>Superior grade, uniform colour and size</td></tr>
+<tr><td><b>AGS-2</b><br>Alleppey Green Superior-2</td><td>6–6.5mm</td><td>Standard superior grade</td></tr>
+<tr><td><b>AGS</b><br>Alleppey Green Standard</td><td>Mixed</td><td>Standard commercial grade, mixed sizing</td></tr>
+</tbody>
+</table>
+</div>
+<p class="spec-line"><b>Moisture:</b> ≤ 10% &nbsp;|&nbsp; <b>Volatile oil content:</b> ≥ 4% (key aromatic quality marker) &nbsp;|&nbsp; <b>Extraneous matter:</b> ≤ 2%.</p>
+</div>
+</div>
+
+<div class="tab-panel" id="tab-blends">
+<div class="grading-block">
+<h3>Popular Coffee Blend</h3>
 <div class="blend-grid">
 <div class="blend-card">
 <div class="eyebrow-dark">Signature Commercial Blend</div>
-<h3>80% Arabica / 20% Robusta</h3>
+<h4>80% Arabica / 20% Robusta</h4>
 <div class="ratio-bar"><span class="ratio-arabica">80%</span><span class="ratio-robusta">20%</span></div>
 <div class="ratio-legend"><span><b>■</b> Arabica</span><span><b>■</b> Robusta</span></div>
-<p>Smooth, rich aromatic body from Arabica balanced with the deep crema, extra kick and strength of Wayanad Robusta.</p>
-<p>Ideal for espresso and traditional filter preparation — our most frequently requested ratio for café and roaster inquiries.</p>
+<p>Smooth, rich aromatic body from Arabica balanced with the deep crema and strength of Robusta. Ideal for espresso and traditional filter — our most requested ratio.</p>
 </div>
 <div class="custom-blend">
 <h4>Need a different ratio?</h4>
@@ -525,93 +576,14 @@ table.grade-table td b{color:var(--forest);}
 </div>
 </div>
 </div>
-</section>
-
-<section id="roast">
-<div class="container">
-<div class="section-head">
-<div class="eyebrow-dark">Technical Specifications</div>
-<h2>Roast Profiles &amp; Export Moisture Standard</h2>
-<p>Every batch roasted and graded against a documented profile — not eyeballed.</p>
-</div>
+<div class="grading-block">
+<h3>Roast Profiles</h3>
 <div class="roast-grid">
-<div class="roast-card">
-<div class="roast-swatch light"></div>
-<h4>Light Roast</h4>
-<div class="roast-temp">180°C – 205°C</div>
-<p>Light brown. High acidity, floral notes, light body — origin character most visible.</p>
+<div class="roast-card"><div class="roast-swatch light"></div><h4>Light Roast</h4><div class="roast-temp">180°C – 205°C</div><p>High acidity, floral notes, light body — origin character most visible.</p></div>
+<div class="roast-card"><div class="roast-swatch medium"></div><h4>Medium Roast</h4><div class="roast-temp">210°C – 220°C</div><p>Balanced sweetness, medium body — the standard filter roast.</p></div>
+<div class="roast-card"><div class="roast-swatch dark"></div><h4>Dark Roast</h4><div class="roast-temp">225°C – 235°C</div><p>Bold, low acidity, smoky notes, rich crema — built for espresso.</p></div>
 </div>
-<div class="roast-card">
-<div class="roast-swatch medium"></div>
-<h4>Medium Roast</h4>
-<div class="roast-temp">210°C – 220°C</div>
-<p>Medium brown. Balanced sweetness, medium body, optimal aroma — the standard filter roast.</p>
-</div>
-<div class="roast-card">
-<div class="roast-swatch dark"></div>
-<h4>Dark Roast</h4>
-<div class="roast-temp">225°C – 235°C</div>
-<p>Dark brown, shiny oil. Bold, low acidity, smoky notes, rich crema — built for espresso.</p>
-</div>
-</div>
-<div class="moisture-note">
-<div class="m-icon">💧</div>
-<div><b>Export Moisture Standard: 11.0% – 12.5% maximum.</b>
-<p>Checked per lot before packing, for stable quality across long-distance transit.</p>
-</div>
-</div>
-</div>
-</section>
-
-<section class="origin" id="grading">
-<div class="container">
-<div class="section-head">
-<div class="eyebrow-dark">Grading Reference</div>
-<h2>Coffee &amp; Spice Grading Standards</h2>
-<p>The processing methods and grade tiers behind every quote we send.</p>
-</div>
-
-<div class="grading-block">
-<h3>Coffee — Processing Methods</h3>
-<div class="table-scroll">
-<table class="grade-table">
-<thead><tr><th>Method</th><th>Applies To</th><th>Process</th><th>Cup Character</th></tr></thead>
-<tbody>
-<tr><td><b>Plantation</b></td><td>Washed Arabica</td><td>Pulped, fermented, washed before sun-drying</td><td>Clean, bright, highly aromatic</td></tr>
-<tr><td><b>Parchment</b></td><td>Washed Robusta</td><td>Wet-processed before drying</td><td>Smooth, clean cup, low bitterness</td></tr>
-<tr><td><b>Cherry</b></td><td>Natural / dry-processed Arabica &amp; Robusta</td><td>Sun-dried whole, inside the cherry fruit</td><td>Earthy, full-bodied, low-acidity</td></tr>
-</tbody>
-</table>
-</div>
-</div>
-
-<div class="grading-block">
-<h3>Coffee — Size &amp; Quality Tiers</h3>
-<div class="table-scroll">
-<table class="grade-table">
-<thead><tr><th>Grade</th><th>Screen Size</th><th>Description</th></tr></thead>
-<tbody>
-<tr><td><b>AA</b></td><td>17 / 18</td><td>Largest, most uniform — premium export grade</td></tr>
-<tr><td><b>A / AB</b></td><td>15 / 16</td><td>Standard export grade, standard for commercial blending</td></tr>
-<tr><td><b>B / C / Bulk</b></td><td>Smaller</td><td>Cost-effective — instant coffee manufacturing &amp; commercial blends</td></tr>
-<tr><td><b>Peaberry (PB)</b><span class="tier-premium">Premium</span></td><td>Single round bean</td><td>Rare natural mutation — concentrated flavor, commands a premium</td></tr>
-</tbody>
-</table>
-</div>
-</div>
-
-<div class="grading-block">
-<h3>Black Pepper &amp; Cardamom</h3>
-<div class="table-scroll">
-<table class="grade-table">
-<thead><tr><th>Product</th><th>Grade</th><th>Notes</th></tr></thead>
-<tbody>
-<tr><td rowspan="3"><b>Black Pepper</b></td><td>Tellicherry Garbled Extra Bold (TGEB)</td><td>Largest, densest berries — our top export grade</td></tr>
-<tr><td>MG1 (Malabar Garbled)</td><td>Bold, garbled, high density — premium standard grade</td></tr>
-<tr><td>Ungarbled</td><td>Baseline mandi grade, sorted to order on request</td></tr>
-<tr><td><b>Cardamom</b></td><td>7mm / 8mm Green</td><td>High essential oil content, vibrant color</td></tr>
-</tbody>
-</table>
+<div class="moisture-note"><div class="m-icon">💧</div><div><b>Export Moisture Standard: 11.0% – 12.5% maximum.</b><p>Checked per lot before packing, for stable quality across long-distance transit.</p></div></div>
 </div>
 </div>
 
@@ -624,29 +596,20 @@ table.grade-table td b{color:var(--forest);}
 <p>Request a free sample batch, or get a real-time FOB export quote for your grade and quantity.</p>
 <div class="cta-btns">
 <a href="#contact" class="btn btn-primary">Request Free Sample Batch</a>
-<a href="#contact" class="btn btn-outline">Get Real-time FOB Quote</a>
 <a href="https://wa.me/447918866764?text=Hi%20D%20A%20TRADERS%2C%20I%27d%20like%20a%20free%20sample%20and%20a%20real-time%20FOB%20quote." target="_blank" rel="noopener" class="btn btn-whatsapp">💬 WhatsApp Us Directly</a>
 </div>
 </div>
 </section>
 
-<section id="process">
-<div class="container">
-<div class="section-head">
-<div class="eyebrow-dark">How to Order</div>
-<h2>From Inquiry to Delivery</h2>
-</div>
-<div class="process-grid">
-<div class="step"><h4>Inquire &amp; Sample</h4><p>Tell us the product, quantity and destination. We send pricing and a sample.</p></div>
-<div class="step"><h4>Confirm Order</h4><p>Approve the sample, agree terms, and confirm your order.</p></div>
-<div class="step"><h4>Grade &amp; Pack</h4><p>We inspect, grade and export-pack your order at origin.</p></div>
-<div class="step"><h4>Ship &amp; Track</h4><p>Documentation, shipping and tracking handled through to your port.</p></div>
-</div>
-</div>
-</section>
-
 <section class="quote" id="contact">
-<div class="container quote-grid">
+<div class="container">
+<div class="process-mini">
+<div class="mstep"><span>Inquire &amp; Sample</span></div>
+<div class="mstep"><span>Confirm Order</span></div>
+<div class="mstep"><span>Grade &amp; Pack</span></div>
+<div class="mstep"><span>Ship &amp; Track</span></div>
+</div>
+<div class="quote-grid">
 <div class="quote-info">
 <div class="eyebrow-dark">Get in Touch</div>
 <h2>Request a Quote</h2>
@@ -672,8 +635,10 @@ table.grade-table td b{color:var(--forest);}
 <label>Product of Interest</label>
 <select name="product">
 <option>Black Pepper</option>
+<option>White Pepper</option>
 <option>Coffee (Robusta)</option>
 <option>Coffee (Arabica)</option>
+<option>Cardamom</option>
 <option>Areca Nut (Adakka)</option>
 <option>Rubber</option>
 </select>
@@ -688,21 +653,22 @@ table.grade-table td b{color:var(--forest);}
 <div class="form-status" id="formStatus"></div>
 </form>
 </div>
+</div>
 </section>
 
 <footer>
 <div class="container footer-grid">
 <div>
 <h4>D A TRADERS</h4>
-<p>Wholesale and retail traders of authentic Wayanad-grown rubber, coffee, areca nut and pepper — from the hills of Kerala to buyers everywhere.</p>
+<p>Wholesale and retail traders of authentic Wayanad-grown coffee, pepper, cardamom, areca nut and rubber — from the hills of Kerala to buyers everywhere.</p>
 </div>
 <div>
 <h4>Explore</h4>
 <ul>
 <li><a href="#origin">Our Origin</a></li>
-<li><a href="#market">Market Prices</a></li>
-<li><a href="#products">Products</a></li>
-<li><a href="#process">How to Order</a></li>
+<li><a href="#products">Products &amp; Prices</a></li>
+<li><a href="#grading">Grading &amp; Specs</a></li>
+<li><a href="#contact">Contact</a></li>
 </ul>
 </div>
 <div>
@@ -736,6 +702,24 @@ table.grade-table td b{color:var(--forest);}
       links.classList.remove('open');
       toggle.setAttribute('aria-expanded', 'false');
       toggle.textContent = '☰';
+    });
+  });
+})();
+
+(function(){
+  var buttons = document.querySelectorAll('.tab-btn');
+  buttons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var target = btn.getAttribute('data-tab');
+      document.querySelectorAll('.tab-btn').forEach(function(b){
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); });
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+      var panel = document.getElementById('tab-' + target);
+      if(panel){ panel.classList.add('active'); }
     });
   });
 })();
