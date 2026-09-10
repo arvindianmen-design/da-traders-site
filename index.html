@@ -126,6 +126,11 @@ section{padding:90px 0;}
 .collage-cap{grid-column:1/-1;font-size:11.5px;color:#8a8a7d;font-style:italic;margin-top:2px;}
 .origin-text h2{font-size:26px;margin-bottom:16px;}
 .origin-text p{color:#4a4a4a;margin-bottom:16px;}
+.story-points{margin-top:8px;}
+.story-point{display:flex;gap:16px;margin-bottom:20px;}
+.story-point .sp-num{flex:none;width:34px;height:34px;border-radius:50%;background:var(--forest);color:var(--gold);font-family:'Playfair Display',serif;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;}
+.story-point h3{font-size:16.5px;margin-bottom:6px;}
+.story-point p{color:#4a4a4a;font-size:14px;margin-bottom:0;}
 .stat-row{display:flex;gap:36px;margin-top:22px;margin-bottom:6px;}
 .stat{font-family:'Playfair Display',serif;}
 .stat b{display:block;font-size:28px;color:var(--terracotta);}
@@ -149,33 +154,26 @@ section{padding:90px 0;}
 .h-step p{font-size:12px;color:#666;}
 
 /* MARKET STRIP (compact, inside products section) */
-.market-strip{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-bottom:46px;}
+.market-strip{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-bottom:18px;}
 .mini-price{background:var(--forest-dark);color:#fff;border-radius:30px;padding:10px 20px;font-size:13px;display:flex;align-items:center;gap:8px;}
 .mini-price b{color:var(--gold);font-family:'Playfair Display',serif;font-size:15px;}
 .market-note{text-align:center;color:#8a8a7d;font-size:12.5px;margin-top:8px;}
 .market-note a{color:var(--terracotta);font-weight:600;}
 
-/* COMMODITY TABLE */
-.commodity-table-wrap{margin-top:40px;overflow-x:auto;border:1px solid rgba(255,255,255,.14);border-radius:14px;}
-table.commodity-table{width:100%;border-collapse:collapse;min-width:760px;}
-table.commodity-table th{background:rgba(255,255,255,.08);text-align:left;font-size:11.5px;letter-spacing:.4px;text-transform:uppercase;color:var(--gold);padding:14px 18px;border-bottom:1px solid rgba(255,255,255,.14);white-space:nowrap;}
-table.commodity-table td{padding:14px 18px;font-size:13px;color:#dbe4dd;border-bottom:1px solid rgba(255,255,255,.1);vertical-align:top;}
-table.commodity-table tr:last-child td{border-bottom:none;}
-table.commodity-table td b{color:#fff;}
-
 /* PRODUCTS */
 .products{background:var(--forest);color:#fff;}
 .products .section-head h2, .products .eyebrow-dark{color:#fff;}
 .products .section-head p{color:#c7d4cb;}
-.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
-.p-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;overflow:hidden;transition:.2s;}
-.p-card:hover{background:rgba(255,255,255,.11);}
-.p-photo{width:100%;height:150px;object-fit:cover;}
-.p-swatch{width:52px;height:52px;border-radius:50%;margin:24px 0 0 24px;}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px;}
+.p-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;overflow:hidden;transition:.2s;cursor:pointer;}
+.p-card:hover{background:rgba(255,255,255,.11);transform:translateY(-3px);}
+.p-card:focus-visible{outline:3px solid var(--gold);outline-offset:2px;}
+.p-photo{width:100%;height:170px;object-fit:cover;}
 .p-body{padding:20px 24px 24px;}
 .p-card h4{color:#fff;font-size:18px;margin-bottom:6px;}
 .p-card p{color:#cfd9d2;font-size:13.5px;margin-bottom:12px;}
 .p-tag{display:inline-block;font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:var(--gold);border:1px solid rgba(212,160,23,.5);padding:4px 10px;border-radius:20px;}
+.p-link{display:flex;align-items:center;gap:6px;margin-top:16px;color:var(--gold);font-weight:600;font-size:13px;}
 
 /* KERALA DIVIDER */
 .kerala-divider{height:16px;background:
@@ -183,8 +181,8 @@ repeating-linear-gradient(45deg, var(--gold) 0 3px, transparent 3px 11px),
 repeating-linear-gradient(-45deg, var(--terracotta) 0 3px, transparent 3px 11px);
 opacity:.55;}
 
-/* GRADING / TABS */
-.tabs{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:40px;}
+/* TABS (reused inside product modals) */
+.tabs{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:32px;}
 .tab-btn{padding:11px 22px;border-radius:30px;border:1.5px solid var(--mist);background:#fff;font-weight:600;font-size:13.5px;color:var(--forest);cursor:pointer;font-family:'Poppins',sans-serif;transition:.15s;}
 .tab-btn:hover{border-color:var(--terracotta);}
 .tab-btn.active{background:var(--forest);color:#fff;border-color:var(--forest);}
@@ -204,18 +202,23 @@ table.grade-table tr:last-child td{border-bottom:none;}
 table.grade-table td b{color:var(--forest);}
 .tier-premium{display:inline-block;background:var(--gold);color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;padding:2px 9px;border-radius:20px;margin-left:8px;}
 
-/* LOGISTICS TAB */
-.logi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:32px;}
-.logi-card{background:#fff;border:1px solid var(--mist);border-radius:14px;padding:22px;}
-.logi-card h4{font-size:15px;margin-bottom:10px;}
-.logi-card ul{padding-left:18px;color:#4a4a4a;font-size:13.5px;}
-.logi-card li{margin-bottom:6px;}
+/* PRODUCT MODAL PRICE / TIER / RETAIL BLOCKS */
+.price-line{background:var(--cream-dark);border:1px solid var(--mist);border-radius:12px;padding:16px 20px;margin-top:16px;display:flex;flex-wrap:wrap;gap:8px 12px;align-items:baseline;}
+.price-line .pl-label{font-size:11.5px;text-transform:uppercase;letter-spacing:.4px;color:#7a7a6e;}
+.price-line b{color:var(--terracotta);font-family:'Playfair Display',serif;font-size:17px;}
+.tier-line{display:flex;flex-wrap:wrap;gap:22px;margin-top:14px;}
+.tier-line .t-item{font-size:13.5px;color:#4a4a4a;}
+.tier-line .t-item b{display:block;color:var(--forest);font-size:11.5px;text-transform:uppercase;letter-spacing:.3px;margin-bottom:3px;font-family:'Poppins',sans-serif;font-weight:700;}
+.retail-note{margin-top:16px;background:#fff;border:1px dashed var(--gold);border-radius:12px;padding:14px 18px;font-size:13px;color:#4a4a4a;}
+.retail-note b{color:var(--forest);}
+
+/* LOGISTICS FACTS (reused inside Contact shipping strip) */
 .logi-facts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
 .logi-fact{background:var(--cream-dark);border:1px solid var(--mist);border-radius:12px;padding:16px 20px;}
 .logi-fact b{display:block;color:var(--forest);font-size:13.5px;margin-bottom:4px;}
 .logi-fact span{font-size:13px;color:#5c5c5c;}
 
-/* BLENDS (inside tab) */
+/* BLENDS (inside Coffee modal) */
 .blend-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:center;}
 .blend-card{background:#fff;border:1px solid var(--mist);border-radius:18px;padding:30px;}
 .blend-card h4{font-size:20px;margin-bottom:12px;}
@@ -246,6 +249,20 @@ table.grade-table td b{color:var(--forest);}
 .moisture-note b{color:var(--forest);}
 .moisture-note p{font-size:13px;color:#4a4a4a;margin:0;}
 
+/* PRODUCT MODALS (Coffee / Pepper / Cardamom detail views) */
+.product-modal{position:fixed;inset:0;z-index:100;display:none;}
+.product-modal.open{display:block;}
+.modal-backdrop{position:absolute;inset:0;background:rgba(19,36,25,.72);backdrop-filter:blur(2px);}
+.modal-panel{position:relative;z-index:2;max-width:920px;margin:36px auto;background:var(--cream);border-radius:20px;max-height:calc(100vh - 72px);overflow-y:auto;box-shadow:0 30px 70px rgba(0,0,0,.45);}
+.modal-head{position:sticky;top:0;background:var(--forest);color:#fff;padding:24px 30px;border-radius:20px 20px 0 0;display:flex;align-items:center;justify-content:space-between;gap:16px;z-index:3;}
+.modal-head h2{color:#fff;font-size:23px;margin:0;}
+.modal-head p{color:#c7d4cb;font-size:12.5px;margin:4px 0 0;}
+.modal-close{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.32);color:#fff;width:36px;height:36px;border-radius:50%;font-size:17px;cursor:pointer;flex:none;display:flex;align-items:center;justify-content:center;}
+.modal-close:hover{background:rgba(255,255,255,.24);}
+.modal-close:focus-visible{outline:3px solid var(--gold);outline-offset:2px;}
+.modal-body{padding:28px 30px 34px;}
+body.modal-open{overflow:hidden;}
+
 /* CTA BANNER */
 .cta-banner{background:linear-gradient(135deg,var(--forest) 0%,var(--forest-dark) 100%);color:#fff;text-align:center;padding:64px 0;}
 .cta-banner h2{color:#fff;font-size:28px;margin-bottom:12px;}
@@ -256,6 +273,8 @@ table.grade-table td b{color:var(--forest);}
 
 /* FINAL: ORDER PROCESS + CONTACT */
 .quote{background:var(--cream-dark);}
+.ship-strip{margin-bottom:54px;}
+.ship-strip .eyebrow-dark{text-align:center;}
 .process-mini{display:flex;flex-wrap:wrap;justify-content:center;gap:0;margin-bottom:54px;counter-reset:mstep;}
 .mstep{display:flex;align-items:center;gap:10px;padding:0 22px;position:relative;}
 .mstep::before{counter-increment:mstep;content:counter(mstep);width:30px;height:30px;flex:none;border-radius:50%;background:var(--terracotta);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:'Playfair Display',serif;font-size:13px;}
@@ -310,12 +329,11 @@ footer li{margin-bottom:10px;}
 .origin-collage{grid-template-columns:1fr 1fr;}
 .compliance-strip{grid-template-columns:1fr;}
 .harvest-grid{grid-template-columns:1fr 1fr;}
-.product-grid{grid-template-columns:1fr 1fr;}
+.product-grid{grid-template-columns:1fr;}
 .blend-grid{grid-template-columns:1fr;}
 .roast-grid{grid-template-columns:1fr;}
 .hero-metrics{grid-template-columns:1fr 1fr;}
 .hero-cred{justify-content:center;}
-.logi-grid{grid-template-columns:1fr;}
 .logi-facts{grid-template-columns:1fr;}
 .moisture-note{flex-direction:column;text-align:center;}
 .footer-grid{grid-template-columns:1fr;}
@@ -326,18 +344,20 @@ footer li{margin-bottom:10px;}
 .mstep{padding:6px 14px;}
 .mstep:not(:last-child)::after{margin-left:14px;}
 .wa-float{width:52px;height:52px;font-size:24px;bottom:16px;right:16px;}
+.modal-panel{margin:16px;max-height:calc(100vh - 32px);}
+.modal-head{padding:20px 22px;}
+.modal-body{padding:22px 22px 28px;}
 }
 </style>
 </head>
 <body>
 
-<header>
+<header id="top">
 <nav>
-<div class="brand">D A <span>TRADERS</span></div>
+<a href="/" class="brand" aria-label="D A TRADERS — go to homepage">D A <span>TRADERS</span></a>
 <div class="nav-links" id="navLinks">
 <a href="#origin">Our Origin</a>
 <a href="#products">Products &amp; Prices</a>
-<a href="#grading">Grading &amp; Specs</a>
 <a href="#contact">Contact</a>
 </div>
 <a href="#contact" class="nav-cta">Get a Quote</a>
@@ -403,12 +423,28 @@ footer li{margin-bottom:10px;}
 <img class="short" src="assets/coffee-cherry-harvest.jpg" alt="Coffee cherries in a harvest basket">
 </div>
 <div class="origin-text">
-<div class="eyebrow-dark">Our Origin &amp; Farm Supply Network</div>
-<h2>Direct Sourcing from Wayanad's High-Altitude Belts</h2>
-<p>D A TRADERS operates directly at origin in Nadavayal, Wayanad (Western Ghats, altitude 700m–1100m MSL). We source raw agricultural produce straight from our network of local smallholders and estate farmers, eliminating intermediary traders to guarantee single-origin authenticity.</p>
-<p>Sourcing runs across the Nadavayal, Panamaram, Kalpetta and Sultan Bathery agricultural belts, with lot-level tracking from estate harvest through to final packing. We follow ISO 22000-aligned hygiene practices and farm-level pesticide compliance on every lot we handle.</p>
+<div class="eyebrow-dark">Our Story</div>
+<h2>From Wayanad's Hills to Your Cup &amp; Table</h2>
+<div class="story-points">
+<div class="story-point">
+<div class="sp-num">1</div>
+<div><h3>Where It Begins — Wayanad's Coffee Belt</h3><p>Wayanad is Kerala's highland coffee and spice district, part of the Western Ghats, with our farms sitting between 700m and 1100m MSL. It's one of India's principal Robusta-growing belts — the altitude, red laterite soil, and shade canopy of the Ghats are what give Wayanad-grown coffee, pepper and cardamom their depth.</p></div>
+</div>
+<div class="story-point">
+<div class="sp-num">2</div>
+<div><h3>The Farmers Behind Every Lot</h3><p>Every sack starts on a family farm or smallholding across the Nadavayal, Panamaram, Kalpetta and Sultan Bathery belts — farmers who've worked these hillsides for generations, picking selectively and drying in small batches they watch and turn by hand. That patience is what makes a clean, uniform lot instead of a mixed one.</p></div>
+</div>
+<div class="story-point">
+<div class="sp-num">3</div>
+<div><h3>From Cherry to Container</h3><p>Robusta is typically sun-dried as whole cherry on raised beds until it reaches export moisture, then milled to remove the dried husk and reveal the green bean — what the trade calls Cherry or Parchment processing, depending on whether it's dried whole or pulped first. Pepper and cardamom follow their own curing and garbling steps, shown below.</p></div>
+</div>
+<div class="story-point">
+<div class="sp-num">4</div>
+<div><h3>Straight From the Estate</h3><p>We buy directly from the farmers and estates above — Robusta and Arabica, black pepper and cardamom alike — with no anonymous trading layer in between. That means we can tell a buyer exactly which belt a lot came from, and the farmer gets paid for quality, not just volume.</p></div>
+</div>
+</div>
 <div class="stat-row">
-<div class="stat"><b>4</b><span>Core products</span></div>
+<div class="stat"><b>3</b><span>Core products</span></div>
 <div class="stat"><b>670721</b><span>Wayanad PIN, origin-traceable</span></div>
 <div class="stat"><b>100%</b><span>Direct farm-gate sourcing</span></div>
 </div>
@@ -440,7 +476,7 @@ footer li{margin-bottom:10px;}
 <div class="section-head">
 <div class="eyebrow-dark">The Range</div>
 <h2>Produce of the Hills</h2>
-<p>Traded wholesale and retail — from trial quantities through full container loads.</p>
+<p>Coffee, black &amp; white pepper, and cardamom — tap any product to see its full grading, pricing and pack sizes.</p>
 </div>
 
 <div class="market-strip">
@@ -449,60 +485,52 @@ footer li{margin-bottom:10px;}
 <div class="mini-price">Cardamom <b>₹2,996–3,143/kg</b> Idukki auction ref.</div>
 <div class="mini-price">FOB / Export <b>Contact for live quote</b></div>
 </div>
+<p class="market-note">*Reference prices are the raw Wayanad APMC / Idukki auction rate before our grading, processing and export margin — not a fixed selling price. Tap a product below for exact grades, order tiers and pack sizes.</p>
 
 <div class="product-grid">
-<div class="p-card">
-<img class="p-photo" src="assets/pepper-mortar.jpg" alt="Black peppercorns in a bowl with a mortar and pestle">
-<div class="p-body"><h4>Black Pepper</h4><p>Bold, pungent Malabar pepper — Wayanad's signature crop.</p><span class="p-tag">Garbled · Ungarbled</span></div>
-</div>
-<div class="p-card">
-<img class="p-photo" src="assets/white-pepper.jpg" alt="Dried white peppercorns, retted and cleaned">
-<div class="p-body"><h4>White Pepper</h4><p>Retted and cleaned for a cleaner, sharper heat — popular in light sauces and blends.</p><span class="p-tag">A1 · A2 · A3</span></div>
-</div>
-<div class="p-card">
+<div class="p-card" data-modal="coffee" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View Coffee types, grades and prices">
 <img class="p-photo" src="assets/coffee-cups-trio.jpg" alt="Three cups showing brewed coffee, ground coffee and whole coffee beans">
-<div class="p-body"><h4>Coffee (Robusta &amp; Arabica)</h4><p>Shade-grown Wayanad Robusta and Arabica, sun-dried, full-bodied.</p><span class="p-tag">Cherry · Parchment</span></div>
+<div class="p-body">
+<h4>Coffee — Robusta &amp; Arabica</h4>
+<p>Shade-grown Wayanad coffee, cherry, parchment and plantation processed, sun-dried and milled at origin.</p>
+<span class="p-tag">Cherry · Parchment · Plantation</span>
+<div class="p-link">View types, grades &amp; prices →</div>
 </div>
-<div class="p-card">
+</div>
+<div class="p-card" data-modal="pepper" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View Black and White Pepper types, grades and prices">
+<img class="p-photo" src="assets/pepper-mortar.jpg" alt="Black peppercorns in a bowl with a mortar and pestle">
+<div class="p-body">
+<h4>Black &amp; White Pepper</h4>
+<p>Bold, pungent Malabar black pepper, and cleaner double-retted white pepper — Wayanad's signature crop.</p>
+<span class="p-tag">Garbled · Ungarbled · A1–A3</span>
+<div class="p-link">View types, grades &amp; prices →</div>
+</div>
+</div>
+<div class="p-card" data-modal="cardamom" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View Cardamom types, grades and prices">
 <img class="p-photo" src="assets/cardamom-bowl.jpg" alt="Bowl of green cardamom pods">
-<div class="p-body"><h4>Cardamom</h4><p>Aromatic small cardamom, sized and colour-sorted to Idukki auction grade.</p><span class="p-tag">7mm · 8mm</span></div>
+<div class="p-body">
+<h4>Cardamom</h4>
+<p>Aromatic small cardamom, sized and colour-sorted to Idukki auction grade.</p>
+<span class="p-tag">AGEB · AGB · AGS</span>
+<div class="p-link">View types, grades &amp; prices →</div>
+</div>
 </div>
 </div>
 
-<div class="commodity-table-wrap">
-<table class="commodity-table">
-<thead><tr><th>Commodity</th><th>Primary Processing</th><th>Trade Grades Available</th><th>Market Reference Price*</th><th>Sample &rarr; Wholesale &rarr; FCL</th></tr></thead>
-<tbody>
-<tr><td><b>Black Pepper</b></td><td>Garbled / Sun-Dried</td><td>TGSEB, TGEB, MG-1, Ungarbled</td><td>₹679–₹706 / kg (ungarbled)</td><td>100g &middot; 100 kg &middot; 18 MT</td></tr>
-<tr><td><b>White Pepper</b></td><td>Double-Retted &amp; Washed</td><td>Grade A1, A2, A3</td><td>Contact for quote</td><td>100g &middot; 50 kg &middot; 5 MT</td></tr>
-<tr><td><b>Coffee (Robusta)</b></td><td>Cherry (Dry) / Parchment (Washed)</td><td>MNEB, MN, Cherry AB, Parchment AB, Peaberry (PB)</td><td>₹216–₹221 / kg</td><td>100g &middot; 250 kg &middot; 19 MT</td></tr>
-<tr><td><b>Coffee (Arabica)</b></td><td>Plantation (Washed) / Cherry</td><td>Plantation AAA/AA/A, Cherry AA/AB, Peaberry (PB)</td><td>Contact for quote</td><td>100g &middot; 250 kg &middot; 19 MT</td></tr>
-<tr><td><b>Small Cardamom</b></td><td>Kiln-Cured &amp; Colour-Sorted</td><td>AGEB, AGB, AGS</td><td>₹2,996–₹3,143 / kg</td><td>100g &middot; 25 kg &middot; 1 MT</td></tr>
-</tbody>
-</table>
-</div>
-<p class="market-note">*Market Reference Price = the raw Wayanad APMC / Idukki auction rate before our grading, processing and export margin — <b>not</b> our fixed selling price. Garbled/TGSEB-grade pepper trades well above the ungarbled baseline shown (around ₹850/kg at major garbled markets) — ask for your exact grade's rate. Figures verified against live mandi &amp; auction data as of 26 Aug 2026. Sample &rarr; Wholesale &rarr; FCL shows our three order tiers per product. Final export quotes depend on packing type, Incoterms and grade selection — <a href="#contact">request a live FOB quote</a>.</p>
 </div>
 </section>
 
-<section id="grading">
-<div class="container">
-<div class="section-head">
-<div class="eyebrow-dark">Grading Reference</div>
-<h2>Coffee &amp; Spice Grading Standards</h2>
-<p>Reference grading tiers used across the Indian coffee, pepper and cardamom trade — the specifications behind every quote we send.</p>
-</div>
+<!-- PRODUCT DETAIL MODALS -->
 
-<div class="tabs" role="tablist">
-<button class="tab-btn active" data-tab="coffee" role="tab" aria-selected="true">Coffee</button>
-<button class="tab-btn" data-tab="pepper" role="tab" aria-selected="false">Black Pepper</button>
-<button class="tab-btn" data-tab="wpepper" role="tab" aria-selected="false">White Pepper</button>
-<button class="tab-btn" data-tab="cardamom" role="tab" aria-selected="false">Cardamom</button>
-<button class="tab-btn" data-tab="blends" role="tab" aria-selected="false">Blends &amp; Roast</button>
-<button class="tab-btn" data-tab="logistics" role="tab" aria-selected="false">Shipping &amp; Logistics</button>
+<div class="product-modal" id="modal-coffee" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-coffee-title">
+<div class="modal-backdrop"></div>
+<div class="modal-panel">
+<div class="modal-head">
+<div><h2 id="modal-coffee-title">Coffee — Robusta &amp; Arabica</h2><p>Wayanad-grown, sun-dried and milled at origin</p></div>
+<button class="modal-close" aria-label="Close">✕</button>
 </div>
+<div class="modal-body">
 
-<div class="tab-panel active" id="tab-coffee">
 <div class="grading-block">
 <h3>Processing Methods</h3>
 <div class="table-scroll">
@@ -516,6 +544,40 @@ footer li{margin-bottom:10px;}
 </table>
 </div>
 </div>
+
+<div class="tab-group">
+<div class="tabs" role="tablist">
+<button class="tab-btn active" data-tab="coffee-robusta" role="tab" aria-selected="true">Robusta</button>
+<button class="tab-btn" data-tab="coffee-arabica" role="tab" aria-selected="false">Arabica</button>
+<button class="tab-btn" data-tab="coffee-blends" role="tab" aria-selected="false">Blends &amp; Roast</button>
+</div>
+
+<div class="tab-panel active" id="tab-coffee-robusta">
+<div class="grading-block">
+<h3>Robusta — Cherry &amp; Parchment Series (Screen Size)</h3>
+<div class="table-scroll">
+<table class="grade-table">
+<thead><tr><th>Grade</th><th>Screen Size</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td><b>Mysore Nuggets Extra Bold (MNEB)</b><span class="tier-premium">Premium</span></td><td>18+ (&gt; 7.1mm)</td><td>Largest, boldest Robusta cherry — top export grade</td></tr>
+<tr><td><b>Mysore Nuggets (MN)</b></td><td>16 / 18</td><td>Bold, dense, premium standard grade</td></tr>
+<tr><td><b>Robusta Cherry / Parchment AB</b></td><td>14 / 16 (5.5–6.5mm)</td><td>High-volume commercial export standard</td></tr>
+<tr><td><b>Robusta Bulk</b></td><td>Below 14</td><td>Mixed size, instant coffee &amp; commercial blends</td></tr>
+</tbody>
+</table>
+</div>
+<p class="spec-line"><b>Export Moisture Standard:</b> 11.0%–12.5% max &nbsp;|&nbsp; <b>Defect Count:</b> ≤ 3% triage max on export grades &nbsp;|&nbsp; <b>Export packaging:</b> 60 kg food-grade jute bags with GrainPro hermetic liners.</p>
+<div class="price-line"><span class="pl-label">Market Reference Price*&nbsp;</span><b>₹216–₹221 / kg</b></div>
+<div class="tier-line">
+<div class="t-item"><b>Sample</b>100g evaluation pack</div>
+<div class="t-item"><b>Min. Wholesale</b>250 kg</div>
+<div class="t-item"><b>Full Container</b>~19 MT / 20ft FCL</div>
+</div>
+<div class="retail-note"><b>Retail &amp; small-business packs:</b> 250g · 500g · 1kg · 2kg · 10kg — contact us for retail pricing.</div>
+</div>
+</div>
+
+<div class="tab-panel" id="tab-coffee-arabica">
 <div class="grading-block">
 <h3>Arabica — Plantation Series (Screen Size)</h3>
 <div class="table-scroll">
@@ -530,80 +592,18 @@ footer li{margin-bottom:10px;}
 </tbody>
 </table>
 </div>
+<p class="spec-line"><b>Export Moisture Standard:</b> 11.0%–12.5% max &nbsp;|&nbsp; <b>Export packaging:</b> 60 kg food-grade jute bags with GrainPro hermetic liners.</p>
+<div class="price-line"><span class="pl-label">Market Reference Price*&nbsp;</span><b>Contact for quote</b></div>
+<div class="tier-line">
+<div class="t-item"><b>Sample</b>100g evaluation pack</div>
+<div class="t-item"><b>Min. Wholesale</b>250 kg</div>
+<div class="t-item"><b>Full Container</b>~19 MT / 20ft FCL</div>
 </div>
-<div class="grading-block">
-<h3>Robusta — Cherry &amp; Parchment Series (Screen Size)</h3>
-<div class="table-scroll">
-<table class="grade-table">
-<thead><tr><th>Grade</th><th>Screen Size</th><th>Description</th></tr></thead>
-<tbody>
-<tr><td><b>Mysore Nuggets Extra Bold (MNEB)</b><span class="tier-premium">Premium</span></td><td>18+ (&gt; 7.1mm)</td><td>Largest, boldest Robusta cherry — top export grade</td></tr>
-<tr><td><b>Mysore Nuggets (MN)</b></td><td>16 / 18</td><td>Bold, dense, premium standard grade</td></tr>
-<tr><td><b>Robusta Cherry / Parchment AB</b></td><td>14 / 16 (5.5–6.5mm)</td><td>High-volume commercial export standard</td></tr>
-<tr><td><b>Robusta Bulk</b></td><td>Below 14</td><td>Mixed size, instant coffee &amp; commercial blends</td></tr>
-</tbody>
-</table>
-</div>
-<p class="spec-line"><b>Export Moisture Standard:</b> 11.0%–12.5% max &nbsp;|&nbsp; <b>Defect Count:</b> ≤ 3% triage max on export grades — checked per lot before packing.</p>
+<div class="retail-note"><b>Retail &amp; small-business packs:</b> 250g · 500g · 1kg · 2kg · 10kg — contact us for retail pricing.</div>
 </div>
 </div>
 
-<div class="tab-panel" id="tab-pepper">
-<div class="grading-block">
-<h3>Black Pepper — Garbled &amp; Ungarbled Grades</h3>
-<div class="table-scroll">
-<table class="grade-table">
-<thead><tr><th>Grade</th><th>Screen / Size</th><th>Bulk Density (Liter Weight)</th><th>Notes</th></tr></thead>
-<tbody>
-<tr><td><b>TGSEB</b><br>Tellicherry Garbled Special Extra Bold<span class="tier-premium">Premium</span></td><td>&gt; 4.75mm</td><td>≥ 600 g/L</td><td>Largest, densest berries, high essential-oil profile — our top export grade</td></tr>
-<tr><td><b>TGEB</b><br>Tellicherry Garbled Extra Bold</td><td>&gt; 4.25mm</td><td>≥ 570 g/L</td><td>Bold, uniform — gourmet export standard</td></tr>
-<tr><td><b>MG-1</b><br>Malabar Garbled Grade 1</td><td>3.0–4.0mm</td><td>500–550 g/L</td><td>Standard industrial export grade</td></tr>
-<tr><td><b>Ungarbled (MUG-1)</b></td><td>Mixed</td><td>Mixed</td><td>Direct farm-run berries, sorted by weight on request</td></tr>
-<tr><td><b>Pinheads / Light Berries</b></td><td>Below 3.0mm</td><td>Low</td><td>Smallest berries — typically used for oleoresin extraction</td></tr>
-</tbody>
-</table>
-</div>
-<p class="spec-line"><b>Moisture:</b> ≤ 11.0% max &nbsp;|&nbsp; <b>Piperine content:</b> 4.5%–6.0% (bioactive alkaloid, key quality marker) &nbsp;|&nbsp; <b>Extraneous matter:</b> &lt; 0.5% dust/stems, garbled &nbsp;|&nbsp; <b>Export packaging:</b> 25 kg / 50 kg multi-wall PP bags or food-grade jute bags.</p>
-</div>
-</div>
-
-<div class="tab-panel" id="tab-wpepper">
-<div class="grading-block">
-<h3>White Pepper — Production &amp; Grades</h3>
-<p style="color:#4a4a4a;font-size:14.5px;margin-bottom:18px;">Produced by double-retting fully ripe red pepper berries in water to loosen and remove the outer skin (pericarp), leaving the clean white inner seed — a slower, more selective process than black pepper production.</p>
-<div class="table-scroll">
-<table class="grade-table">
-<thead><tr><th>Grade</th><th>Size</th><th>Notes</th></tr></thead>
-<tbody>
-<tr><td><b>A1 (Extra Bold)</b><span class="tier-premium">Premium</span></td><td>&gt; 4.0mm</td><td>Cleaned, cream-white, uniform size, &lt; 1% discoloured seeds — top export tier</td></tr>
-<tr><td><b>A2 (Standard)</b></td><td>Standard</td><td>Fully processed cream-to-off-white shade, standard density</td></tr>
-<tr><td><b>A3</b></td><td>Commercial</td><td>Commercial grade, greater size and colour variance</td></tr>
-</tbody>
-</table>
-</div>
-<p class="spec-line"><b>Moisture:</b> ≤ 12.0% max &nbsp;|&nbsp; <b>Volatile oil:</b> ≥ 2.0% &nbsp;|&nbsp; <b>Export packaging:</b> 25 kg / 50 kg multi-wall PP bags.</p>
-</div>
-</div>
-
-<div class="tab-panel" id="tab-cardamom">
-<div class="grading-block">
-<h3>Small Cardamom — Alleppey Green Grades</h3>
-<div class="table-scroll">
-<table class="grade-table">
-<thead><tr><th>Grade</th><th>Pod Size</th><th>Notes</th></tr></thead>
-<tbody>
-<tr><td><b>AGEB</b><br>Alleppey Green Extra Bold<span class="tier-premium">Premium</span></td><td>≥ 8.0mm</td><td>Largest, boldest pods, vibrant natural green — top premium grade</td></tr>
-<tr><td><b>AGB</b><br>Alleppey Green Bold</td><td>≥ 7.5mm</td><td>High-grade wholesale standard</td></tr>
-<tr><td><b>AGS</b><br>Alleppey Green Superior</td><td>≥ 7.0mm</td><td>Domestic trade standard</td></tr>
-</tbody>
-</table>
-</div>
-<p class="spec-line"><b>Volatile/essential oil:</b> 3.5%–6.0% &nbsp;|&nbsp; <b>Moisture:</b> ≤ 10.0% max &nbsp;|&nbsp; <b>Extraneous matter:</b> &lt; 1.0% &nbsp;|&nbsp; <b>Export packaging:</b> vacuum-sealed inner bags inside 10 kg / 25 kg corrugated master cartons.</p>
-<p class="spec-line">Pod-count-per-100g and split-pod tolerance are confirmed per lot on request — ask when you send your inquiry.</p>
-</div>
-</div>
-
-<div class="tab-panel" id="tab-blends">
+<div class="tab-panel" id="tab-coffee-blends">
 <div class="grading-block">
 <h3>Popular Coffee Blend</h3>
 <div class="blend-grid">
@@ -637,28 +637,125 @@ footer li{margin-bottom:10px;}
 </div>
 </div>
 
-<div class="tab-panel" id="tab-logistics">
-<div class="grading-block">
-<h3>Export Packaging by Product</h3>
-<div class="logi-grid">
-<div class="logi-card"><h4>☕ Coffee</h4><ul><li>60 kg food-grade jute bags</li><li>GrainPro hermetic moisture-lock liners</li></ul></div>
-<div class="logi-card"><h4>🫘 Black &amp; White Pepper</h4><ul><li>25 kg / 50 kg multi-wall PP bags</li><li>Food-grade jute bags on request</li></ul></div>
-<div class="logi-card"><h4>🌿 Cardamom</h4><ul><li>Vacuum-sealed inner bags</li><li>10 kg / 25 kg corrugated export master cartons</li></ul></div>
 </div>
-</div>
-<div class="grading-block">
-<h3>Shipping &amp; Commercial Terms</h3>
-<div class="logi-facts">
-<div class="logi-fact"><b>Container Loading Capacity</b><span>Up to ~18–19 MT per 20ft FCL for coffee &amp; pepper, subject to product and packing</span></div>
-<div class="logi-fact"><b>Incoterms Supported</b><span>FOB, CFR, or CIF to destination port — quoted per shipment</span></div>
-<div class="logi-fact"><b>Port of Loading</b><span>Cochin (Kochi) Port, Kerala — the nearest major international container terminal to Wayanad</span></div>
-<div class="logi-fact"><b>Order Tiers</b><span>Free/nominal sample (100g per product) &rarr; minimum wholesale lot (25–250 kg depending on product) &rarr; full container load</span></div>
+
+<p class="market-note" style="text-align:left;margin-top:22px;">*Market Reference Price = the raw mandi rate before our grading, processing and export margin — not our fixed selling price. Verified against live mandi data as of 26 Aug 2026. <a href="#contact">Request a live FOB quote</a>.</p>
+
 </div>
 </div>
 </div>
 
+<div class="product-modal" id="modal-pepper" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-pepper-title">
+<div class="modal-backdrop"></div>
+<div class="modal-panel">
+<div class="modal-head">
+<div><h2 id="modal-pepper-title">Black &amp; White Pepper</h2><p>Malabar pepper, garbled and graded at origin</p></div>
+<button class="modal-close" aria-label="Close">✕</button>
 </div>
-</section>
+<div class="modal-body">
+
+<div class="tab-group">
+<div class="tabs" role="tablist">
+<button class="tab-btn active" data-tab="pepper-black" role="tab" aria-selected="true">Black Pepper</button>
+<button class="tab-btn" data-tab="pepper-white" role="tab" aria-selected="false">White Pepper</button>
+</div>
+
+<div class="tab-panel active" id="tab-pepper-black">
+<div class="grading-block">
+<h3>Black Pepper — Garbled &amp; Ungarbled Grades</h3>
+<div class="table-scroll">
+<table class="grade-table">
+<thead><tr><th>Grade</th><th>Screen / Size</th><th>Bulk Density (Liter Weight)</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><b>TGSEB</b><br>Tellicherry Garbled Special Extra Bold<span class="tier-premium">Premium</span></td><td>&gt; 4.75mm</td><td>≥ 600 g/L</td><td>Largest, densest berries, high essential-oil profile — our top export grade</td></tr>
+<tr><td><b>TGEB</b><br>Tellicherry Garbled Extra Bold</td><td>&gt; 4.25mm</td><td>≥ 570 g/L</td><td>Bold, uniform — gourmet export standard</td></tr>
+<tr><td><b>MG-1</b><br>Malabar Garbled Grade 1</td><td>3.0–4.0mm</td><td>500–550 g/L</td><td>Standard industrial export grade</td></tr>
+<tr><td><b>Ungarbled (MUG-1)</b></td><td>Mixed</td><td>Mixed</td><td>Direct farm-run berries, sorted by weight on request</td></tr>
+<tr><td><b>Pinheads / Light Berries</b></td><td>Below 3.0mm</td><td>Low</td><td>Smallest berries — typically used for oleoresin extraction</td></tr>
+</tbody>
+</table>
+</div>
+<p class="spec-line"><b>Moisture:</b> ≤ 11.0% max &nbsp;|&nbsp; <b>Piperine content:</b> 4.5%–6.0% (bioactive alkaloid, key quality marker) &nbsp;|&nbsp; <b>Extraneous matter:</b> &lt; 0.5% dust/stems, garbled &nbsp;|&nbsp; <b>Export packaging:</b> 25 kg / 50 kg multi-wall PP bags or food-grade jute bags.</p>
+<div class="price-line"><span class="pl-label">Market Reference Price*&nbsp;</span><b>₹679–₹706 / kg (ungarbled)</b></div>
+<div class="tier-line">
+<div class="t-item"><b>Sample</b>100g evaluation pack</div>
+<div class="t-item"><b>Min. Wholesale</b>100 kg</div>
+<div class="t-item"><b>Full Container</b>~18 MT / 20ft FCL</div>
+</div>
+<div class="retail-note"><b>Retail &amp; small-business packs:</b> 250g · 500g · 1kg · 2kg · 10kg — contact us for retail pricing.</div>
+</div>
+</div>
+
+<div class="tab-panel" id="tab-pepper-white">
+<div class="grading-block">
+<h3>White Pepper — Production &amp; Grades</h3>
+<p style="color:#4a4a4a;font-size:14.5px;margin-bottom:18px;">Produced by double-retting fully ripe red pepper berries in water to loosen and remove the outer skin (pericarp), leaving the clean white inner seed — a slower, more selective process than black pepper production.</p>
+<div class="table-scroll">
+<table class="grade-table">
+<thead><tr><th>Grade</th><th>Size</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><b>A1 (Extra Bold)</b><span class="tier-premium">Premium</span></td><td>&gt; 4.0mm</td><td>Cleaned, cream-white, uniform size, &lt; 1% discoloured seeds — top export tier</td></tr>
+<tr><td><b>A2 (Standard)</b></td><td>Standard</td><td>Fully processed cream-to-off-white shade, standard density</td></tr>
+<tr><td><b>A3</b></td><td>Commercial</td><td>Commercial grade, greater size and colour variance</td></tr>
+</tbody>
+</table>
+</div>
+<p class="spec-line"><b>Moisture:</b> ≤ 12.0% max &nbsp;|&nbsp; <b>Volatile oil:</b> ≥ 2.0% &nbsp;|&nbsp; <b>Export packaging:</b> 25 kg / 50 kg multi-wall PP bags.</p>
+<div class="price-line"><span class="pl-label">Market Reference Price*&nbsp;</span><b>Contact for quote</b></div>
+<div class="tier-line">
+<div class="t-item"><b>Sample</b>100g evaluation pack</div>
+<div class="t-item"><b>Min. Wholesale</b>50 kg</div>
+<div class="t-item"><b>Full Container</b>~5 MT / 20ft FCL</div>
+</div>
+<div class="retail-note"><b>Retail &amp; small-business packs:</b> 250g · 500g · 1kg · 2kg · 10kg — contact us for retail pricing.</div>
+</div>
+</div>
+
+</div>
+
+<p class="market-note" style="text-align:left;margin-top:22px;">*Market Reference Price = the raw Wayanad APMC mandi rate before our grading, processing and export margin — not our fixed selling price. Garbled/TGSEB-grade pepper trades well above the ungarbled baseline shown (around ₹850/kg at major garbled markets) — ask for your exact grade's rate. Verified against live mandi data as of 26 Aug 2026. <a href="#contact">Request a live FOB quote</a>.</p>
+
+</div>
+</div>
+</div>
+
+<div class="product-modal" id="modal-cardamom" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-cardamom-title">
+<div class="modal-backdrop"></div>
+<div class="modal-panel">
+<div class="modal-head">
+<div><h2 id="modal-cardamom-title">Small Cardamom</h2><p>Kiln-cured and colour-sorted to Idukki auction grade</p></div>
+<button class="modal-close" aria-label="Close">✕</button>
+</div>
+<div class="modal-body">
+
+<div class="grading-block">
+<h3>Small Cardamom — Alleppey Green Grades</h3>
+<div class="table-scroll">
+<table class="grade-table">
+<thead><tr><th>Grade</th><th>Pod Size</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><b>AGEB</b><br>Alleppey Green Extra Bold<span class="tier-premium">Premium</span></td><td>≥ 8.0mm</td><td>Largest, boldest pods, vibrant natural green — top premium grade</td></tr>
+<tr><td><b>AGB</b><br>Alleppey Green Bold</td><td>≥ 7.5mm</td><td>High-grade wholesale standard</td></tr>
+<tr><td><b>AGS</b><br>Alleppey Green Superior</td><td>≥ 7.0mm</td><td>Domestic trade standard</td></tr>
+</tbody>
+</table>
+</div>
+<p class="spec-line"><b>Volatile/essential oil:</b> 3.5%–6.0% &nbsp;|&nbsp; <b>Moisture:</b> ≤ 10.0% max &nbsp;|&nbsp; <b>Extraneous matter:</b> &lt; 1.0% &nbsp;|&nbsp; <b>Export packaging:</b> vacuum-sealed inner bags inside 10 kg / 25 kg corrugated master cartons.</p>
+<p class="spec-line">Pod-count-per-100g and split-pod tolerance are confirmed per lot on request — ask when you send your inquiry.</p>
+<div class="price-line"><span class="pl-label">Market Reference Price*&nbsp;</span><b>₹2,996–₹3,143 / kg</b></div>
+<div class="tier-line">
+<div class="t-item"><b>Sample</b>100g evaluation pack</div>
+<div class="t-item"><b>Min. Wholesale</b>25 kg</div>
+<div class="t-item"><b>Full Container</b>~1 MT / 20ft FCL</div>
+</div>
+<div class="retail-note"><b>Retail &amp; small-business packs:</b> 250g · 500g · 1kg · 2kg · 10kg — contact us for retail pricing.</div>
+</div>
+
+<p class="market-note" style="text-align:left;margin-top:22px;">*Market Reference Price = the raw Idukki auction rate before our grading, processing and export margin — not our fixed selling price. Verified against live auction data as of 26 Aug 2026. <a href="#contact">Request a live FOB quote</a>.</p>
+
+</div>
+</div>
+</div>
 
 <section class="cta-banner">
 <div class="container">
@@ -674,6 +771,17 @@ footer li{margin-bottom:10px;}
 
 <section class="quote" id="contact">
 <div class="container">
+
+<div class="ship-strip">
+<div class="eyebrow-dark">Shipping &amp; Export Terms</div>
+<div class="logi-facts">
+<div class="logi-fact"><b>Container Loading Capacity</b><span>Up to ~18–19 MT per 20ft FCL for coffee &amp; pepper, subject to product and packing</span></div>
+<div class="logi-fact"><b>Incoterms Supported</b><span>FOB, CFR, or CIF to destination port — quoted per shipment</span></div>
+<div class="logi-fact"><b>Port of Loading</b><span>Cochin (Kochi) Port, Kerala — the nearest major international container terminal to Wayanad</span></div>
+<div class="logi-fact"><b>Order Tiers</b><span>Sample (100g) &rarr; minimum wholesale lot &rarr; full container load, plus retail packs (250g–10kg) on request</span></div>
+</div>
+</div>
+
 <div class="process-mini">
 <div class="mstep"><span>Inquire &amp; Sample</span></div>
 <div class="mstep"><span>Confirm Order</span></div>
@@ -705,14 +813,14 @@ footer li{margin-bottom:10px;}
 <div>
 <label>Product of Interest</label>
 <select name="product">
-<option>Black Pepper</option>
-<option>White Pepper</option>
 <option>Coffee (Robusta)</option>
 <option>Coffee (Arabica)</option>
+<option>Black Pepper</option>
+<option>White Pepper</option>
 <option>Cardamom</option>
 </select>
 </div>
-<div><label>Quantity</label><input type="text" name="quantity" placeholder="e.g. 5 MT"></div>
+<div><label>Quantity</label><input type="text" name="quantity" placeholder="e.g. 5 MT, or 1kg retail"></div>
 </div>
 <div class="form-row">
 <div class="full"><label>Message</label><textarea name="message" rows="3"></textarea></div>
@@ -736,7 +844,6 @@ footer li{margin-bottom:10px;}
 <ul>
 <li><a href="#origin">Our Origin</a></li>
 <li><a href="#products">Products &amp; Prices</a></li>
-<li><a href="#grading">Grading &amp; Specs</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </div>
@@ -776,20 +883,64 @@ footer li{margin-bottom:10px;}
 })();
 
 (function(){
-  var buttons = document.querySelectorAll('.tab-btn');
-  buttons.forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var target = btn.getAttribute('data-tab');
-      document.querySelectorAll('.tab-btn').forEach(function(b){
-        b.classList.remove('active');
-        b.setAttribute('aria-selected', 'false');
-      });
-      document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); });
-      btn.classList.add('active');
-      btn.setAttribute('aria-selected', 'true');
-      var panel = document.getElementById('tab-' + target);
-      if(panel){ panel.classList.add('active'); }
+  document.addEventListener('click', function(e){
+    var btn = e.target.closest('.tab-btn');
+    if(!btn) return;
+    var scope = btn.closest('.tab-group') || document;
+    var target = btn.getAttribute('data-tab');
+    scope.querySelectorAll('.tab-btn').forEach(function(b){
+      b.classList.remove('active');
+      b.setAttribute('aria-selected', 'false');
     });
+    scope.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); });
+    btn.classList.add('active');
+    btn.setAttribute('aria-selected', 'true');
+    var panel = document.getElementById('tab-' + target);
+    if(panel){ panel.classList.add('active'); }
+  });
+})();
+
+(function(){
+  var openers = document.querySelectorAll('[data-modal]');
+  var modals = document.querySelectorAll('.product-modal');
+
+  function openModal(key){
+    var m = document.getElementById('modal-' + key);
+    if(!m) return;
+    m.classList.add('open');
+    m.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+  }
+  function closeModal(m){
+    m.classList.remove('open');
+    m.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+  }
+
+  openers.forEach(function(el){
+    el.addEventListener('click', function(){
+      openModal(el.getAttribute('data-modal'));
+    });
+    el.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        openModal(el.getAttribute('data-modal'));
+      }
+    });
+  });
+
+  modals.forEach(function(m){
+    m.querySelectorAll('.modal-close, .modal-backdrop').forEach(function(el){
+      el.addEventListener('click', function(){ closeModal(m); });
+    });
+  });
+
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){
+      modals.forEach(function(m){
+        if(m.classList.contains('open')){ closeModal(m); }
+      });
+    }
   });
 })();
 
