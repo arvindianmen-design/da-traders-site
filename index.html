@@ -107,15 +107,14 @@ section{padding:90px 0;}
 .section-head h2{font-size:34px;margin-bottom:14px;}
 .section-head p{color:#5c5c5c;font-size:16px;}
 
-/* OUR STORY BANNER (photo) */
-.heritage{position:relative;min-height:340px;overflow:hidden;}
+/* OUR STORY BANNER (photo) — compact, sits directly under the hero */
+.heritage{position:relative;min-height:0;overflow:hidden;border-top:1px solid rgba(255,255,255,.1);}
 .heritage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.05);z-index:0;}
-.heritage::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(19,36,25,.82) 0%,rgba(19,36,25,.55) 45%,rgba(19,36,25,.35) 100%);z-index:1;}
-.heritage-text{position:relative;z-index:2;min-height:340px;display:flex;flex-direction:column;justify-content:center;padding:52px 24px;}
+.heritage::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(19,36,25,.86) 0%,rgba(19,36,25,.62) 55%,rgba(19,36,25,.4) 100%);z-index:1;}
+.heritage-text{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:30px 24px;}
 .heritage-text .inner{max-width:1140px;margin:0 auto;width:100%;color:#fff;}
-.heritage-text h2{color:#fff;font-size:28px;max-width:560px;margin-bottom:10px;}
-.heritage-text p{color:#e6efe2;max-width:520px;font-size:14.5px;margin-bottom:10px;}
-.heritage-text p:last-child{margin-bottom:0;}
+.heritage-text h2{color:#fff;font-size:21px;max-width:760px;margin-bottom:8px;}
+.heritage-text p{color:#e6efe2;max-width:760px;font-size:13.5px;line-height:1.6;margin-bottom:0;}
 
 /* ORIGIN (merged mega-section) */
 .origin{background:var(--cream-dark);}
@@ -350,7 +349,8 @@ footer li{margin-bottom:10px;}
 .footer-grid{grid-template-columns:1fr;}
 .form-row{grid-template-columns:1fr;}
 .hero h1{font-size:32px;}
-.heritage-text h2{font-size:22px;}
+.heritage-text{padding:26px 24px;}
+.heritage-text h2{font-size:19px;}
 .mstep{padding:6px 14px;}
 .mstep:not(:last-child)::after{margin-left:14px;}
 .wa-float{width:52px;height:52px;font-size:24px;bottom:16px;right:16px;}
@@ -406,6 +406,17 @@ footer li{margin-bottom:10px;}
 </div>
 </section>
 
+<section class="heritage" id="story">
+<img src="assets/pepper-heritage-scoop.jpg" alt="Black and green peppercorns with a wooden scoop, rope and map — spice trade heritage styling">
+<div class="heritage-text">
+<div class="inner">
+<div class="eyebrow">Our Story</div>
+<h2>Kerala has traded pepper and spice for over two thousand years. We still do it the honest way.</h2>
+<p>No anonymous middlemen, no blended lots of unknown origin — just the same hill-to-port relationship that's defined Malabar's spice trade for generations, run to a modern standard. D A TRADERS is led by Mr. K J Devassia, who has spent over 30 years on the ground in Wayanad's coffee and spice trade — buying direct from farmers, judging a lot by hand, and building the relationships this business still runs on. Today that ground experience is paired with a modern digital front door, so the same honesty reaches buyers anywhere in the world.</p>
+</div>
+</div>
+</section>
+
 <div class="trust">
 <div class="container">
 <span>🌿 100% Direct Farm Sourcing</span>
@@ -414,18 +425,6 @@ footer li{margin-bottom:10px;}
 <span>🌍 Exported Worldwide</span>
 </div>
 </div>
-
-<section class="heritage" id="story">
-<img src="assets/pepper-heritage-scoop.jpg" alt="Black and green peppercorns with a wooden scoop, rope and map — spice trade heritage styling">
-<div class="heritage-text">
-<div class="inner">
-<div class="eyebrow">Our Story</div>
-<h2>Kerala has traded pepper and spice for over two thousand years. We still do it the honest way.</h2>
-<p>No anonymous middlemen, no blended lots of unknown origin — just the same hill-to-port relationship that's defined Malabar's spice trade for generations, run to a modern standard.</p>
-<p>D A TRADERS is led by Mr. K J Devassia, who has spent over 30 years on the ground in Wayanad's coffee and spice trade — buying direct from farmers, judging a lot by hand, and building the relationships this business still runs on. Today that ground experience is paired with a modern digital front door, so the same honesty reaches buyers anywhere in the world.</p>
-</div>
-</div>
-</section>
 
 <section class="origin" id="origin">
 <div class="container">
